@@ -14,6 +14,7 @@ public class SimpleTest9 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// do while 예제
 		int iNum1;
 		iNum1 = 0;
 		
