@@ -15,8 +15,28 @@ public class SimpleTest14 {
 	 */
 	public static void main(String[] args) {
 		try {
-		
-			File f = new File("C://CMS//9966010561//EB11//EB110309");
+			long nFileSize = 102403;
+			long nLastBlockSize = nFileSize % (1024 * 100);
+			long nLastBlock = nFileSize / (1024 * 100);
+			nLastBlock = (nLastBlockSize == 0)?nLastBlock:nLastBlock+1;
+			
+			long nLastSeqNo = nLastBlockSize / 1024;
+			if(nLastBlockSize == 0) {
+				nLastSeqNo = 100;
+			} else {
+				nLastSeqNo = (nLastBlockSize % 1024 ==0)?nLastSeqNo:nLastSeqNo+1;
+			}
+						
+			System.out.println("nFileSize="+nFileSize);
+			System.out.println("nLastBlockSize="+nLastBlockSize);
+			System.out.println("nLastBlock="+nLastBlock);
+			System.out.println("nLastSeqNo="+nLastSeqNo);
+			
+			File f = new File("C://CMS//9966010561//EB21//EB210311");
+			int a;
+			System.out.println("f.length()="+f.length());
+			a =  (int)(f.length() / 1024);
+			System.out.println("A="+a);
 			BufferedInputStream in = new BufferedInputStream (new FileInputStream(f));
 					
 		    byte[] contents = new byte[1024];
@@ -33,16 +53,17 @@ public class SimpleTest14 {
 			
             try
             {
-                //Reader reader = new BufferedReader(
-                //        new InputStreamReader(new FileInputStream(f), "UTF-8"));
-            	BufferedReader reader = new BufferedReader(
-                        new InputStreamReader(new FileInputStream(f)));
+            	BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(f), "UTF-8"));
+            	//BufferedReader reader = new BufferedReader(
+                //        new InputStreamReader(new FileInputStream(f)));
                 int n;
                 while ((n = reader.read(buffer)) != -1) 
-                {
+                { 
                 	strFileContents = new String(buffer, 0, n);
-                	System.out.println(strFileContents);
-     			   // System.out.println(strFileContents);
+                	strFileContents = new String(strFileContents.getBytes("8859_1"),"KSC5601"); 
+
+                	//System.out.println(strFileContents);
+     			    //System.out.println(strFileContents);
                 	//writer.write(buffer, 0, n);
                     //System.out.println(writer.toString());
                 }
