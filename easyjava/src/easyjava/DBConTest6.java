@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
-
-import org.mariadb.jdbc.internal.mysql.MySQLProtocol.PrepareResult;
 
 public class DBConTest6 {
 
