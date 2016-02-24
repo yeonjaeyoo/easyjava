@@ -113,3 +113,40 @@ Page 7.
 
 Page 8. 
 
+요청을 만들기 위한 애플리케이션과 통신하는 서버를 위해서, 전문화된 소프트웨어는 메시지를 송수신하는데 사용된다. 이 소프트웨어는 소켓이라고 한다. 하나의 소켓은 클라이언트 측에서 발견되고, 그 외 소켓은 서버 측에 위치한다.
+소켓이 연결되면 통신이 가능하다. 소켓에는 여러 가지 유형이있다. 이것들은 데이터그램(datagram) 소켓을 포함한다. 스트림 소켓은 TCP를 자주 사용한다. 그리고 일반적으로 IP 수준에서 작동하는것은 로우(raw) 소켓이다.
+클라이언트/서버 애플리케이션에 대한 TCP 소켓에 초점을 맞출 것이다.
+
+특히, 간단한 에코 서버를 생성할 것이다. 이 서버는 클라이언트로부터 문자 메시지를 받은즉시 다시 그 클라이언트로 메시지를 보낸다. 이 서버의 단순성으로 클라이언트-서버 기본 사항에 초점을 맞출 수 있다.
+
+간단한 에코 서버 만들기
+
+다음과 같이 SimpleEchoServer 클래스의 정의를 시작할 것이다. main 메소드에서, 초기화 서버 메시지가 표시된다.
+
+public class SimpleEchoServer {
+     public static void main(String[] args) {
+         System.out.println("Simple Echo Server");
+         ...
+     }
+}
+
+메소드의 본체의 나머지 부분은 예외 처리를 위해 일련의 try 블록으로 구성한다. 첫 번째 try 블록에서 ServerSocket의 인스턴스의 매개변수로 6000을 사용하여 생성된다.
+ServerSocket 클래스는 클라이언트 요청을 수신하는 서버에서 사용되는 특수화된 소켓이다. 그것의 매개변수는 포트 번호이다. 서버가 위치한 기계의 IP는 필연적으로 서버에 관심이 아니고, 클라이언트는 궁극적으로 이 IP 주소를 알 필요가 있다.
+
+다음 코드에서 ServerSocket 클래스의 인스턴스가 생성되고, accept 메소드가 호출된다. 클라이언트로부터 요청을 수신 할 때까지 ServerSocket는 호출을 블록(block) 한다. 블록킹(Blocking)은 메소드가 반환 할 때까지 프로그램이 중단되는 것을 의미한다.
+요청이 수신되면, accept 메소드는 클라이언트와 서버 사이의 연결을 나타내는 Socket 클래스 인스턴스를 반환한다. 지금 메시지를 송신하고 수신할 수 있다.
+
+     try (ServerSocket serverSocket = new ServerSocket(6000)){
+         System.out.println("Waiting for connection.....");
+         Socket clientSocket = serverSocket.accept();
+         System.out.println("Connected to client");
+          ...
+          
+Page 9.
+
+     } catch (IOException ex) {
+         // 예외처리
+     }
+
+이 클라이언트 소켓이 생성 된 후, 서버에 전송된 메시지를 처리 할 수 있다. 텍스트를 처리하고, 클라이언트로부터 메시지를 읽기 위해서 BufferedReader 인스턴스를 사용할 것이다.
+이것은 클라이언트 소켓의 getInputStream 메소드를 사용하여 생성된다. 클라이언트에 응답하기 위해서 PrintWriter 인스턴스를 사용할 것이다. 다음과 같이, 클라이언트 소켓의 getOutputStream 메소드를 사용하여 생성된다.     
