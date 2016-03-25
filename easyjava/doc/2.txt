@@ -76,6 +76,54 @@ TCP는 HTTP, SMTP(Simple Mail Transfer Protocol), FTP(File Transfer Protocol)와
 
 NetworkInterface 클래스 사용
 
+NetworkInterface 클래스는 네트워크에서 노드로 작동하는 디바이스에 접속하는 수단을 제공한다. 이 클래스는 또한 로우 레벨 디바이스 주소를 얻을 수 있는 수단을 제공한다. 많은 시스템은 동시에 다중 네트워크에 접속된다. 이들은 네트워크 카드 같은 유선이거나 무선 LAN 혹은 블루투스 연결을 위한 무선일지도 모른다.
+
+NetworkInterface 클래스는 IP 주소를 나타내고, 이 IP 주소에 대한 정보를 제공한다. 네트워크 인터페이스는 컴퓨터와 네트워크 간의 접속점이다. 이것은 주로 어떤 종류의 NIC를 사용한다. 그것은 물리적 표시을 가질 필요는 없지만, 루프백 접속 완료로서 소프트웨어로 수행 될 수 있다(IPv4는 127.0.0.1, IPv6는 ::1).
+
+NetworkInterface 클래스는 public 생성자가 없다. 3개 정적 메서드는 NetworkInterface 클래스의 인스턴스를 반환하기 위해 제공된다.
+
+-getByInetAddress: IP 주소를 안다면 사용된다.
+-getByName: 인터페이스 이름을 단다면 사용된다.
+-getNetworkInterfaces: 사용 가능한 인터페이스 목록를 제공한다.
+
+다음 코드는 현재 컴퓨터의 네트워크 인터페이스 목록을 획득하고 표시하는 getNetworkInterfaces 메소드의 사용 방법을 보여준다.
+
+예제
+
+Page 33.
+
+한 가지 가능한 출력은 다음과 같지만, 뒷부분은 생략한다.
+
+...
+
+다음에 보여진것과 같이 어떤것이 존재하는 경우, getSubInterfaces 메소드는 서브인터페이스 목록을 반환할 것이다. 하나의 물리적 네트워크 인터페이스가 라우팅 목적을 위한 논리적 인터페이스로 분할될 때 서브인터페이스가 발생한다.
+
+Enumeration<NetworkInterface> interfaceEnumeration =         element.getSubInterfaces();
+
+각 네트워크 인터페이스는 하나 이상의 연관된 IP 주소를 가질 것이다. getInetAddresses 메소드는 이 주소의 Enumeration을 반환한다. 다음에 보여주는 것과 같이, 네트워크 인터페이스 초기 목록은 연관된 IP 주소의 표시를 위해 증강되었다.
+
+소스
+
+Page 34.
+
+다음은 가능한한 결과다.
+
+...
+
+우리는 또한 다음과 같은 자바 8 기술을 사용할 수 있다. 스트림과 람다식은 동일한 결과를 보여주는 IP 주소를 표시하기 위해 사용된다.
+
+소스
+
+네트워크 연결에 대한 상세한 것을 보여주는 위한 다양한 InetworkAddress 메소드 있다. 우리는 이러한 문제가 발생하여 그들은 논의될 것이다.
+
+Page 35.
+
+Mac 주소 획득
+
+
+
+
+
 
 
 
