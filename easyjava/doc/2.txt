@@ -340,6 +340,32 @@ getAuthority : 권한은 일반적으로 서버의 호스트 네임 혹은 IP �
 
 Page 43.      
 
+2016.03.31
+
+위의 표의 메소드를 설명하기 위해 다음과 같은 메소드를 사용한다.
+
+소스
+
+다음 출력은 여러 URL이 메소드에 대한 인수로 사용되는 출력을 보여준다.
+
+출력
+
+Page 45.
+
+URL 클래스은 IO 스트림과 오픈 커넥션을 지원한다. 1장, '네트워크 프로그래밍 시작'에서 openConnection 메소드를 예제를 살펴봤다. getContent 메소드는 URL에서 참조하는 데이터를 반환한다. 예를 들면, getContent 메소드는 URL에서 참조하는 데이터를 반환한다.
+
+url = new URL("http://www.packtpub.com");
+     System.out.println("getContent: " + url.getContent();
+     
+다음과 같이 출력된다.
+
+sun.net.www.protocol.http.HttpURLConnection$HttpInputStream@5c647e05
+
+이것은 리소스를 처리하는 입력 스트림을 사용할 필요가 있음을 시사한다. 데이터의 타입은 URL과 연관있다. 이 주제는 4 장, '클라이언트/서버 개발'에서 설명하는 URLConnection 클래스를 탐구한다.
+
+IP 주소와 InetAddress 클래스
+
+IP 주소는 컴퓨터, 프린터, 스캐너, 또는 유사한 디바이스와 같은 노드를 식별하는데 사용되는 수치이다. 이는 네트워크 인터페이스 주소와 위치 주소를 위해 사용된다. 컨텍스트(context)에서 고유한 주소는 디바이스를 식별한다. 동일한 시간에 네트워크에서 위치를 구성한다. 이름은 www.packtpub.com 같은 엔티티를 지정한다. 위치한 곳의 주소인, 83.166.169.231를 알려준다. 사이트에서 메시지를 보내거나 받을려면, 메시지는 비정상적으로 하나 이상의 노드를 통해 라우팅된다.     
        
                    
 
