@@ -428,10 +428,55 @@ isAnyLocalAddress / any / 로컬 주소와 일치하는 주소이다.와일드�
 isLoopbackAddress / Loopback / 루프백 주소이다. IPv4는 127.0.0.1, IPv6은 0:0:0:0:0:0:0:1이다.
 isLinkLocalAddress / Link-local / 링크 로컬 주소이다.
 
+2016.04.05
+
 Page 48.
 
-isSiteLocalAddress  
-             
+isSiteLocalAddress / Site-local / 사이트에 대해 로컬이다. 서로 다른 네트워크에 있는 다른 노드들에 의해 같은 사이트 내에서만 도달할 수 있다.
+isMulticastAddress / MC / 멀티캐스트 주소이다.
+isMCLinkLocal / MC link-local / 링크 로컬 멀티캐스트 주소이다.
+isMCNodeLocal / MC node local / 노드 로컬 멀티캐스트 주소이다.
+isMCSiteLocal / MC site-local / 사이트 로컬 멀티캐스트 주소이다.
+isMCOrgLocal / MC org local / 조직 로컬 멀티캐스트 주소이다.
+isMCGlobal / MC global / 글로벌 멀티캐스트 주소이다.
+
+사용되는 주소 타입과 범위는 IPv4 및 IPv6에 대한 다음 표에 요약되었다.
+
+<표 삽입>
+
+테스트 도달 가능성
+
+InetAddress 클래스의 isReachable 메소드는 주소를 찾을 수 있는지 여부를 시도할 것이다. 주소를 찾을 수 있다면, 메소드는 true를 반환한다. 다음의 예제는 이 메소드를 보여준다. getAllByName 메소드는 URL에서 가능한 InetAddress 인스턴스의 배열(array)를 반환한다. isReachable 메소드는 주소에 도달할 수 없는 것을 결정하기 전에 밀리초 단위로 대기할 시간을 지정하는 정수(integer) 인수를 사용한다.   
+
+소스
+
+Page 49.
+
+여기에 보이는 것과 같이 URL인 www.packtpub.com은 도달했다.
+
+www.packtpub.com/83.166.169.231 is reachable
+
+그러나 www.google.com은 도달하지 못했다.
+
+www.google.com/173.194.121.52 is not reachable
+
+www.google.com/173.194.121.51 is not reachable
+
+www.google.com/2607:f8b0:4004:809:0:0:0:1014 is not reachable
+
+결과는 다를 수 있다. isReachable 메소드는 주소에 도달할 수 있는지 여부를 결정하기 위해 최선을 다할 것이다. 그러나 성공은 단순히 주소존재여부보다 다른 여인에 따라 더 달라진다. 실패의 원인은 포함할 수 있다. 네트워크 응답 시간이 너무 길거나 혹은 방화벽에서 사이트를 차단하여 서버가 다운될 수도 있다. 운영 체제와 JVM 셋팅도 얼마나 메소드가 잘 동작하는지에 영향을 미칠 수 있다.
+
+이 메소드의 대안은 URL 대항하여 핑(ping) 커맨드를 실행하는 RunTime class의 exec 메소드를 사용하는 것이다. 그러나 이것은 휴대성이 용이하지 않고 여전히 isReachable 메소드의 성공에 영향을 미치는 몇 가지 요인으로 어려움이 예상될 수 있다.
+
+Inet4Address 소개
+
+이 주소는 4,294,967,296(232) 주소까지 허용되고, 32 비트로 구성되어 있다. 주소의 사람이 읽을 수 있는 형태는 각각 0 ~ 255 범위의 네 개의 십진수(8 비트)로 구성된다. 주소 중 일부는 개인 네트워크와 멀티캐스트 주소를 위해 예약되었다.
+
+Page 50.
+
+초기에 IPv4의 사용에서는, 첫번째 옥텟(octet)(8 비트 단위)는 네트워크의 수(또한 네트워크 프리픽스 또는 네트워크 블록이라고 함)를 나타내고, 나머지 비트는 나머지 필드(호스트 식별자)라고 표현한다. 후에, 세 가지 클래스는 주소를 분할하기 위해 사용되었다.(A, B, C) 이 시스템은 폐기 되었고, CIDR(Classless Inter-Domain Routing)로 대체되었다. 이 라우팅은 더 많은 유연성을 제공을 위한 비트 경계에 주소를 할당한다. 이 스키마는 이전에 클래스-풀 시스템(class-full system)과 달리 클래스레스(classless)라고 부른다. IPv6에서는 64 비트의 네트워크 식별자가 사용된다.
+
+       
 
 
 
