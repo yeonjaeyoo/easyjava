@@ -202,5 +202,60 @@ Waiting for request ...
 Connected to Client
 >
 
-Hello를 입력한다. 
+2016.04.19
 
+Hello를 입력한다. 그러면 다음과 같은 출력을 확인할 것이다.
+
+> Hello
+Sent: Hello
+Waiting for message from client ...
+
+클라이언트는 지금 표시될 것이다.
+
+Message: Hello
+> 
+
+Hi!라고 응답을 입력한다. 다음과 같이 클라이언트 출력이 표시될 것이다.
+
+> Hi!
+Sent: Hi!
+Waiting for message from the server ...
+
+Page 68.
+
+서버는 표시된다.
+
+Message: Hi!
+> 
+
+어느 한쪽이 quit 커맨드를 입력할 때까지이 과정을 계속할 수 있다. 그러나 64 바이트 버퍼 제한을 초과하는 메시지가 입력되면 BufferOverflowException 예외가 발생할 것이다. sendFixedLengthMessage 메소드를 sendMessage 메소드로 교체하고 receiveFixedLengthMessage 메소드를 receiveMessage 메소드로 교체하면 이 문제를 예방할 수 있다.
+
+이러한 send 및 receive 작업하는 방법을 살펴 보자.
+
+HelperMethods 클래스
+
+HelperMethods 클래스는 다음과 같이 정의된다. 이전에 사용된 send 메소드와 receive 메소드를 소유한다. 이러한 메소드들은 쉽게 접속할 수 있도록 정적(static)으로 선언된다.
+
+<소스>
+
+고정된 길이의 메시지 메소드는 다음과 같다. 그들은 본질적으로 '채널을 사용한 타임 서버(Using channels with a time server)' 절에서 사용된 접근과 동일한 방법을 수행한다.
+
+<소스>
+
+Page 69.
+
+가변 길이의 메시지 처리
+
+가변 길이 메시지를 처리하는 기술은 이 절에서 설명한다. 가변 길이 메시지의 문제점은 메시지의 길이를 알 수 없다는 것이다. 버퍼가 완전히 차지 않을 때 메시지의 끝에 도달된 것으로 가정할 수 없다. 대부분의 메시지와 함께 참(true)일 수 있지만, 메시지 길이가 메시지 버퍼와 동일한 크기인 경우, 메시지의 끝을 놓칠 수있다.
+
+메시지의 끝에 도달한 때를 결정하는 또 다른 방법은 메시지의 prefix로 메시지 길이를 전송하거나 메시지의 끝에 특별한 종료 문자를 추가한다. 여기서는 후자의 방법을 선택한다.
+
+<<박스 시작>>
+이 예제는 ASCII 문자에서 작동한다. 유니코드 문자가 대신 사용된다면, BufferOverflowException 예외가 발생될 것이다. CharBuffer 클래스는 캐릭터(character) 데이터에 사용되고 ByteBuffer 클래스와 유사한 기능을 제공한다. CharBuffer 클래스는 http://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html에 자세히 설명되어 있다.
+<<박스 끝>>
+
+0x00의 값은 메시지의 끝을 표시하기 위해 사용되었다. 그것은 인쇄되지 않고 종종 C 같은 언어에서 스트링은 내부적으로 종료하는 방법에 대응하도록 발생하기 때문에  우리는 그것이 사용자에 의해 실수로 쉽게 입력되지 않기 때문에 이 값을 선택했다.
+
+sendMessage 메소드에서 전송되기 전에, put 메소드는 메시지의 끝에 종료 바이트를 추가한다. 버퍼 크기는 메시지 길이의 플러스 하나다.(The buffer size is the length of the message plus one.)
+
+<소스>
