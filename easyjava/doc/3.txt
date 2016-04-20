@@ -259,3 +259,30 @@ Page 69.
 sendMessage 메소드에서 전송되기 전에, put 메소드는 메시지의 끝에 종료 바이트를 추가한다. 버퍼 크기는 메시지 길이의 플러스 하나다.(The buffer size is the length of the message plus one.)
 
 <소스>
+
+2016.04.20 
+
+Page 70.
+
+receiveMessage 메소드에서, 수신된 각각의 바이트가 종료 바이트 있는지를 체크한다. 이 경우, 메시지는 반환된다. 우리가 메시지의 일부를 추출 한 후 clear 메소드는 ByteBuffer 변수에 적용된다. 이 메소드는 필수적이다. 그렇지 않으면, read 메소드는 0을 반환할 것이다. 이 메소드는 다시 0으로 버퍼 위치와 용량에 제한을 설정한다.
+
+<소스>
+
+이제 애플리케이션을 보여줄 준비가 됐다.
+
+Page 71.
+
+채팅 서버/클라이언트 애플리케이션 실행
+
+처음 서버를 실행한다. 다음과 같이 출력이 표시된다.
+
+Chat Server started
+Waiting for request ...
+
+다음으로, 클라이언트를 시작하면 다음과 같은 결과를 보여준다.
+
+Connected to Chat Server
+Waiting for message from the server ...
+
+이러한 사용자는 서버와 클라이언트 간에 상호작용이 발생되고 현재 구현에 한계가 있다.
+
