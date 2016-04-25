@@ -381,5 +381,41 @@ Sent: 12.55
 
 Page 77.
 
+클라이언트 측에서, 우리는 quit 커맨드를 입력할 때까지 가격을 계속 확인할 수 있다. 이 명령은 클라이언트를 종료한다. 다음과 같이 요청 가능한 하나의 순서는 다음과 같다.
 
+PartsClient Started
+Connected to Parts Server
+Enter part name: Hammer
+Sent: Hammer
+The price is 12.55
+Enter part name: Pliers
+Sent: Pliers
+The price is 4.65
+Enter part name: saw
+Sent: saw
+The price is null
+Enter part name: Saw
+Sent: Saw
+The price is 8.45
+Enter part name: quit
+Sent: quit
+PartsClient Terminated
+
+가격 정보를 찾는 다른 클라이언트가 있을 수 있으므로 서버는 실행을 계속할 것이다. 클라이언트 핸들러가 종료될 때 서버에 의해 다음과 유사한 출력이 표시된다.
+
+ClientHandler Terminated for java.nio.channels.SocketChannel[connected local=/127.0.0.1:5000 remote=/127.0.0.1: 51132]
+
+두 개 이상의 클라이언트를 시작하고 그들이 서버와 상호 작용하는 방법을 살펴보자. 7장, '네트워크 확장성'에서 애플리케이션을 보다 정교한 방법으로 조사할 것이다.
+
+Page 78.
+
+비동기 소켓 채널
+
+비동기 통신은 요청을 하고 그 요청이 완료될 때까지 기다리지 않고 다른 작업을 진행한다. 이것은 논블로킹(non-blocking)이라고 부른다.
+
+비동기 채널 동작을 지원하는 세 가지 클래스가 있다.
+
+-AsynchronousSocketChannel: 소켓에 대한 간단한 비동기 채널이다.
+-AsynchronousServerSocketChannel: 서버 소켓에 대한 비동기 채널이다.
+-AsynchronousDatagramChannel: 데이터그램 지향 소켓(datagram-oriented socket)을 위한 채널이다.
 
