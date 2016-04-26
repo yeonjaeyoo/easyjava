@@ -419,3 +419,64 @@ Page 78.
 -AsynchronousServerSocketChannel: 서버 소켓에 대한 비동기 채널이다.
 -AsynchronousDatagramChannel: 데이터그램 지향 소켓(datagram-oriented socket)을 위한 채널이다.
 
+2016.04.26
+
+AsynchronousSocketChannel 클래스의 read/write 메소드는 비동기이다. AsynchronousServerSocketChannel 클래스는 AsynchronousSocketChannel 인스턴스를 반환하는 accept 메소드를 가진다. 이 메소드 또한 비동기다. 6장, UDP 및 멀티캐스트에서 AsynchronousDatagramChannel 클래스를 살펴볼 것이다.
+
+비동기 I/O 작업을 처리하는 두 가지 방법이 있다.
+
+-java.util.concurrent 패키지의 Future 인터페이스 사용
+-CompletionHandler 인터페이스 사용
+
+Future 인터페이스는 보류 결과를 나타낸다. 이것은 허용하는 실행 및 비 블록을 계속하는 애플리케이션에 대한 비동기 작업을 지원한다. 이 오브젝트를 사용하여 다음 메소드 중 하나를 사용할 수 있다.
+
+-isDone 메소드
+-완료될 때까지 블록을 하는 get 메소드
+
+get 메소드는 타임아웃을 지원하는 하나의 버전으로 오버로드된다. 작업이 완료되면 CompletionHandler 인스턴스가 호출된다. 이것은 본질적으로 콜백이다. 우리는 여기에서 이 방법을 설명하지 않는다.
+
+각각 AsynchronousServerSocketChannelServer 및 AsynchronousSocketChannelClient라고 하는 비동기 서버와 클라이언트를 개발할 것이다. 클라이언트/서버 애플리케이션에 제한이 있으며 단지 메시지를 클라이언트에서 서버로 전송될 수 있다. 이것은 애플리케이션의 비동기 측면을 살펴볼 수 있도록 한다.
+
+Page 79.
+
+비동기 서버 소켓 채널 서버 생성
+
+AsynchronousServerSocketChannelServer 클래스는 다음 코드 시퀀스로 정의된다. 서버가 시작되었음을 알리는 메시지가 표시되고, AsynchronousServerSocketChannel클래스의 인스턴스가 생성되는 곳에서는 try-with-resources 블록은 입력되고, 실제 작업이 발생한다.
+
+<소스>
+
+bind 메소드는 로컬호스트와 포트 5000과 함께 AsynchronousServerSocketChannel 인스턴스를 나타내는 serverChannel 변수를 연결하는 데 사용된다.
+
+<소스>
+
+서버는 클라이언트에 연결하기위해 대기한다. Future 인스턴스는 acceptResult 변수에 의해 참조된다.
+
+<소스>
+
+Page 80.
+
+또 다른 try 블록은 클라이언트 요청을 처리하는 데 사용된다. 그것은 클라이언트에 연결하는 AsynchronousSocketChannel 클래스의 인스턴스를 생성한다. 채널이 생성될 때까지 get 메소드는 블록(block)할 것이다.
+
+<소스>
+
+try 블록의 본문은 버퍼를 할당하고 버퍼를 채울 채널에서 읽는다. 버퍼가 채워되면, flip 메소드는 버퍼에 적용하여, 메시지가 처리되고 표시된다.
+
+<소스>
+
+버퍼가 준비가 되었는지 여부를 결정하는 세 가지 방법이 있다. 첫번째 기술은 다음과 같이, 버퍼가 준비 될 때까지 isDone 메소드를 사용한 결과 변수를 나타내는 Future 오브젝트를 사용한다.
+
+<소스>
+
+두 번째 기술은 버퍼가 준비 될 때까지 블록하는 get 메소드를 사용한다.
+
+<소스>
+
+세 번째 기술은 또한 get 메소드를 사용하지만 기다리는 시간을 결정하기 위해 타임아웃(timeout)을 사용했다. 이 예제에서는, 타임아웃 전 10초 대기한다.
+
+<소스>
+
+Page 81.
+
+
+ 
+
