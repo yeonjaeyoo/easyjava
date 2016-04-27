@@ -477,6 +477,47 @@ try 블록의 본문은 버퍼를 할당하고 버퍼를 채울 채널에서 읽
 
 Page 81.
 
+2016.04.27
 
+get 메소드의 이 버전을 사용하는 경우, catch 블록은 TimeoutException 예외를 처리하기 위해 try 블록에 클로징하여 추가해야 한다.
+
+서버가 시작되면, 다음과 같은 출력을 확인한다.
+
+Asynchronous Server Started
+Waiting for client to connect... 
+
+이제, 클라이언트를 살펴 보자.
+
+비동기 소켓 채널 클라이언트 생성
+
+클라이언트는 다음 코드에 AsynchronousSocketChannelClient 클래스를 사용하여 구현된다. 클라이언트가 시작되었음을 나타내는 메시지는 AsynchronousSocketChannel 인스턴스를 생성하는 try 블록 다음에 표시된다.
+
+<소스>
+
+InetSocketAddress 인스턴스는 서버에서 사용하는 주소와 포트 번호를 지정하여 생성된다. 이 후 연결을 나타내는 Future 오브젝트는 생성된다. 연결이 될 때까지 get 메소드는 블록된다.
+
+<소스>
+
+Page 82.
+
+연결이되면, 메시지는 표시된다. 사용자가 메시지를 입력하라는 곳에서는 무한 루프가 입력된다. wrap 메소드는 메시지 버퍼를 채운다. write 메소드는 AsynchronousSocketChannel 인스턴스에 메시지 작성을 시작하고 Future 오브젝트를 반환한다. isDone 메소드는 완료하는 데 쓰기 위해 대기하는 데 사용된다. 메시지가 quit이면, 클라이언트 애플리케이션은 종료된다.
+
+<소스>
+
+실제로 비동기 클라이언트/서버를 살펴 보자.
+
+서버는 실행중으로 클라이언트 애플리케이션을 시작한다. 이것은 다음과 같은 출력을 생성한다.
+
+Asynchronous Client Started
+Client is started: true
+Sending messages to server: > 
+
+서버의 출력은 이제 다음과 같이 나타난다.
+
+Asynchronous Server Started
+Waiting for client to connect...
+Messages from client: 
+
+Page 83.
  
 
