@@ -584,4 +584,49 @@ This lingers on close if data is present(when configured in blocking mode only)
 
 Page 87.
 
+<표>
+
+소켓 옵션은 setOption 메서드를 사용하여 구성된다. 다음 코드는 부품 서버 절에서 사용되는 서버 소켓 채널을 이용한 메소드를 설명한다.
+
+serverSocketChannel.setOption(SO_RCVBUF, 64);
+
+첫 번째 인수는 SocketOption<T> 인터페이스의 인스턴스이다. 이 인터페이스는 옵션에서 이름과 타입 메소드를 정의한다. StandardSocketOptions 클래스는 이 인터페이스를 구현한 일련의 옵션을 정의한다. 예를 들면, 다음과 같이 SO_RCVBUF 인스턴스가 정의된다.
+
+public static final SocketOption<Integer> SO_RCVBUF;
+
+추가, 구현-고유 옵션을 사용할 수 있다.(There may be additional, implementation-specific  options available.)
+
+요약
+
+3장에서는 NIO 채널 및 버퍼 클래스의 사용을 살펴보았다. 채널은 버퍼에서 외부 소스와 데이터를 전송을 연결한다. 네트워크를 통해 다른 소켓에 연결하는 채널 소켓을 살펴본다.
+
+버퍼는 데이터의 임시 저장소이다. 버퍼를 사용하여 데이터를 순차적으로 혹은 랜덤하게 액세스할 수 있다. 이것은 많은 애플리케이션을 위한 좋은 선택을 만드는 많은 버퍼 동작이다.
+
+SocketChannel, ServerSocketChannel, AsynchronousSocketChannel 클래스를 포함하는 여러 종류의 채널 소켓을 살펴봤다. ServerSocketChannel 클래스는 서버를 지원하며, 클라이언트가 접속을 요청할 때까지 블록을 위한 accept 메소드를 사용한다. 이 메소드는 클라이언트의 SocketChannel에 연결되고, SocketChannel 인스턴스를 반환한다. AsynchronousSocketChannel 및 AsynchronousSocketChannel 클래스는 두 개의 애플리케이션 간의 논블록킹을 가능하게하는 비동기 통신을 지원한다. DatagramChannel은 또한 지원되고, 6장, 'UDP 및 멀티캐스트'에서 다룰 것이다.
+
+Page 88.
+
+버퍼와 채널 클래스가 함께 작동하는 방법을 설명하고 여러 클라이언트/서버 애플리케이션에서의 사용을 보여준다. 또한 스레드를 사용하여 여러 클라이언트를 다룰 수 있는 간단한 방법을 살펴본다. 
+
+대량 데이터 전송이 배열 및 버퍼 간에 수행하는 방법을 살펴봤다. 뷰와 읽기 전용 버퍼의 사용을 또한 살펴봤다. 기본 OS 소켓 지원을 구성할 수 있는 방법에 대한 소개와 함께 종료됐다. 다음 장에서, 다른 클라이언트/서버 애플리케이션을 지원하기 위해 이러한 많은 클래스와 기술을 사용한다.
+
+Page 89.
+
+클라이언트/서버 개발
+
+4장에서는 주로 HTTP와 연관을 지향하는 클라이언트/서버 애플리케이션을 개발하는 과정을 살펴볼 것이다. HTTP는 중요한 프로토콜이고, 다수의 애플리케이션에 대한 기본 통신 매체로서 기능을 제공한다. 우리는 클라이언트에 요청된 프로토콜과 서버를 위한 다양한 버전의 프로토콜을 살펴본다.
+
+특히, 살펴볼 것이다.
+
+-HTTP 프로토콜의 특성을 점검한다.
+-로우 레벨 소켓이 프로토콜을 지원할 수 있는 방법을 살펴본다.
+-HTTP 서버를 생성하는 HttpURLConnect과 HTTPServer 클래스를 사용한다.
+-다양한 오픈 소스 자바 HTTP 서버를 살펴본다.
+-다양한 구성 문제와 쿠키 처리 방법을 살펴본다.
+
+HTTP 서버는 광범위하게 사용되기 때문에 자바를 지원하는 방법을 잘 이해하는 것이 중요하다.
+
+HTTP 프로토콜 구조
+
+HTTP는 월드 와이드 웹(WWW)을 통해 리소스를 제공하는 데 사용되는 네트워크 프로토콜이다.
 
