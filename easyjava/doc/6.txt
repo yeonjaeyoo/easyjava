@@ -329,4 +329,30 @@ NetworkInterface 클래스는 네트워크 인터페이스를 나타낸다. 이 
 
 <소스>
 
+displayNetworkInterfaceInformation 메소드는 다음에 보여준다. 이 방법은 https://docs.oracle.com/javase/tutorial/networking/nifs/listing.html에서 순응시킨다.
 
+<소스>
+
+Page 158.
+
+이 예제를 실행하면 다음과 유사한 출력을 얻을 것이다.
+
+<결과>
+
+클라이언트/서버의 경우, eth0 인터페이스를 사용한다. 당신의 플랫폼에 가장 적합한 하나를 선택해야한다. 예를 들어, Mac에서는 en0 혹은 awdl0 일 수도 있다.
+
+Page 159.
+
+UDP 데이터 채널 멀티캐스트 서버
+
+UDP 데이터 채널 멀티캐스트 서버는 아래와 같다.
+
+-채널 및 멀티캐스트 그룹 설정
+-메시지를 포함하는 버퍼 생성
+-전송하는 무한 루프를 사용하여 그룹 메시지를 표시
+
+서버의 정의는 다음과 같다.
+
+<소스>
+
+첫 번째 작업은 IPv6를 사용하도록 지정하는 System 클래스의 setProperty 메소드를 사용한다. DatagramChannel 인스턴스는 생성되고 eth0 네트워크 인터페이스는 생성된다.
