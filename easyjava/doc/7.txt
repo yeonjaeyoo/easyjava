@@ -176,4 +176,53 @@ Page 184.
 
 이제 함께 작동하는 방법을 살펴보자.
 
-Page 185. 
+Page 185.
+
+진행중인 스레드 풀 클라이언트/서버
+
+우선 서버 애플리케이션을 시작한다. 다음과 같은 출력을 확인한다.
+
+Thread Pool Server Started
+Listening for a client connection
+
+다음으로, 클라이언트를 시작한다. 차축 가격(axle price)에 대한 요청이 전송되어 다음과 같은 출력을 생성하고 238.5의 응답이 수신된다.
+
+Client Started
+Connected to a Server
+Axle request sent
+Response: 238.5
+Client Terminated
+
+서버 측에서는 다음과 유사한 출력이 표시된다. 스레드가 생성되고, 요청 및 응답 데이터가 표시된다. 그 후 스레드는 종료된다. 스레드의 이름이 스트링 "packt"로 시작된다는 점에 유의한다. 애플리케이션 패키지의 이름이다.
+
+Connected to a Client
+Task created: packt.WorkerThread@33909752
+Listening for a client connection
+Worker Thread Started
+Request for Axle and returned a price of $238.50
+Client Connection Terminated
+Worker Thread Terminated
+
+두 번째 클라이언트를 시작하면, 서버는 다음과 유사한 출력을 생성한다. 새 스레드가 각 요청에 대해 생성된다는 점에 유의한다.
+
+Thread Pool Server Started
+Listening for a client connection
+Connected to a Client
+Task created: packt.WorkerThread@33909752
+
+Page 186.
+
+<결과>
+
+Callable와 스레드 풀
+
+Callable와 Future 인터페이스를 사용하는 것은 다중 스레드를 지원하는 또다른 접근 방식을 제공한다. Callable 인터페이스는 결과를 반환할 필요가 있는 스레딩을 지원한다. Runnable 인터페이스 run 메소드는 값을 반환하지 않는다. 어떤 스레드의 경우, 이것은 문제가 될 수 있다. Callable 인터페이스는 값을 반환하고 대신에 Runnable 인터페이스를 사용할 수 있고 하나의 메소드, call를 보유하고 있다.(수정해야함)
+
+Future 인터페이스는 Callable 오브젝트와 함께 사용된다. 아이디어는 call 메소드가 호출되고 현재의 스레드가 다른 작업을 계속 수행하는 것이다. Callable 오브젝트가 완료되면, get메소드는 결과를 검색하기 위해 사용된다. 필요한 경우 이 메소드는 블록될 것이다.
+
+Callable 사용
+
+이전에 생성한 WorkerThread 클래스를 보완하기 위해 Callable 인터페이스를 사용한다. WorkerThread 클래스의 부품 이름 해시 맵을 배치를 대신하여, 가격을 반환하는 call 메소드를 오버라이드하는 WorkerCallable 클래스로 이동한다. 실제로 이 애플리케이션에서 추가 작업이지만, Callable 인터페이스를 사용하는 하나의 방법을 보여준다. Callable 오브젝트에서 값을 반환하는 방법을 보여준다.
+
+Page 187.
+
