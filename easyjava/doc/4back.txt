@@ -1,0 +1,11 @@
+Page 115.
+
+ifModifiedSince 변수는 오브젝트 검색의 발생여부에 따라 제어한다. ifModifiedSince 변수는 특정시점(1970년 1월 1일 GMT) 이후의 밀리초로 시간을 나타내는 long 값이다. 오브젝트가 그 시간보다 좀 더 최근에 수정된 경우, 패치(fetch) 된다.
+
+다음 표는 ~ 요약했다. 
+
+표 : setDoInput -> setDoOutput 변경
+
+Tomcat 같은 보다 정교한 서버는 구성방법을 제어하는 더 많은 옵션이 있다.
+
+Page 116.
