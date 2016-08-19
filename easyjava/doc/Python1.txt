@@ -209,6 +209,27 @@ NLP에서 taggers, chunkers 등의 성능을 테스트하기 위해, 정보 검�
 
 <소스>
 
+편집 거리(Ethe edit distance) 알고리즘을 사용한 유사도 측정
+
+두 스트링 사이에서 편집 거리(Edit distance) 또는 리벤슈타인 편집 거리(Levenshtein edit distance)는 두 스트링을 동일하게하기 위해 삽입, 교체, 혹은 삭제될 수 있는 문자의 수를 계산하기 위해 사용된다.
+
+Edit Distance에서 수행되는 동작은 다음과 같다.
+
+-Copying letters from the first string to the second string (cost 0) and yg g 
+substituting a letter  with another (cost 1):
+D(i-1,j-1) + d(si,tj)(Substitution / copy)
+
+-Deleting a letter in the first string (cost 1)
+D(i,j-1)+1  (삭제)
+
+Page 17.
+
+-두 번째 스트링에 문자를 삽입(cost 1)
+D(i,j) = min D(i-1,j)+1  (삽입)
+
+nltk.metrics 패키지에 포함되어 있는 Edit Distance의 파이썬 코드는 다음과 같다.
+
+<소스>
 
 
 
