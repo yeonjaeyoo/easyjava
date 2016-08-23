@@ -231,5 +231,30 @@ nltk.metrics 패키지에 포함되어 있는 Edit Distance의 파이썬 코드�
 
 <소스>
 
+Page 26.
+
+<소스>
+
+fourgrams을 생성하고 fourgrams의 빈도수를 생성하기 위해 다음과 같은 코드가 사용된다.
+
+<소스>
+
+이제 주어진 문장에 대한 ngrams을 생성하는 코드를 볼 수 있다.
+
+<소스>
+
+Page 27.
+
+<소스>
+
+주어진 텍스트를 위한 MLE 개발
+
+MLE은 또한 다항식 논리 회귀 혹은 조건부 지수 분류기로서 언급되는 NLP 분야에서 필수적인 작업이다. 그것은 버거(Berger)와 델라 트에트라(Della Pietra)에 의해 1996년 처음 도입됐다. 최대 엔트로피(Entropy)는 nltk.classify.maxent 모듈에서 NLTK에 정의된다. 이 모듈에서는, 모든 확률 분포(probability distributions)는 학습 데이터에 따른다고 생각된다. 이 모델은 두 가지 기능, 즉 입력 기능 및 관절 기능(input-feature and joint feature)을 참조하는 데 사용된다. 입력 기능은 라벨이 없는 단어의 특징이라고 할 수 있다. 결합된 기능(joined feature)은 라벨된 단어의 기능을 호출할 수 있다. MLE는 텍스트에서 특정 사건에 대한 확률 분포를 포함하는 freqdist를 생성하는데 사용된다. param freqdist은 확률 분포의 기반이 되는 빈도수 분포로 구성된다.
+
+NLTK에서 최대 엔트로피 모델에 대한 코드를 확인할 것이다.
+
+<소스>
+
+ 
 
 
