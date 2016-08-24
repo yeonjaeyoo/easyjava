@@ -255,6 +255,28 @@ NLTK에서 최대 엔트로피 모델에 대한 코드를 확인할 것이다.
 
 <소스>
 
- 
+2016.08.24
+
+Page 28.
+
+<소스>
+
+이전의 코드에서, nltk.probability는 텍스트에서 개별 토큰의 발생 빈도수를 결정하기 위해 사용되는 FreqDist 클래스로 구성된다.
+
+ProbDistI은 텍스트에서 개체 발생의 확률 분포를 결정하는 데 사용된다. 기본적으로 확률 분포의 두 종류가 있다. 유래된 확률 분포(Derived Probability Distribution)와 분석적인 확률 분포(Analytic Probability Distribution) 분산 확률 분포(Distributed Probability Distributions?)는 도수 분포(frequency distribution)에서 얻을 수 있다. 분석 확률 분포는 변화(variance)와 같은 파라미터(?)에서 얻을 수 있다.
+
+빈도 분포를 얻기 위해, 최대 가능 추정치가 사용된다. 도수 분포에서 빈도수에 기초하여 각 발생 확률을 계산한다.
+
+<소스>
+
+확률 분포에 기초하여 상기 빈도수 분포를 발견할 것이다.
+
+<소스>
+
+Page 29.
+
+빈도수 분포를 얻기 위해 사용된다. 그 범위는 0과 1 사이에 있는 실수(real number), 감마(Gamma)에 의해서 표현된다. LidstoneProbDist는 다음과 같이 결과 N, 카운트 c와 bins B로 주어진 관찰의 확률을 계산한다. (c+Gamma)/(N+B*Gamma)
+
+
 
 
