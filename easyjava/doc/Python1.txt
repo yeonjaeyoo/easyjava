@@ -434,5 +434,10 @@ MLE를 위한 백 오프 메커니즘(back-off mechanism) 개발
 
 <소스>
 
+2016.09.02
+
+ 믹스 앤 매치를 얻기 위한 데이터 보간 적용(확인필요)
+ 
+드문 텍스트를 처리 할 때 additive smoothed bigram 사용의 제한은 무지(ignorance)의 상태로 back off한다. 예를 들어, 매혹적인 단어는 훈련 데이터에서 다섯 번 발생한다.:by에 의한 세 번 the에 의한 두번
  
 
