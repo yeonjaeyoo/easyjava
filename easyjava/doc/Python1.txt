@@ -466,6 +466,12 @@ Page 92.
 
 NLTK에서 문맥 자유 문법 규칙(Context-free Grammar rules)의 사용을 도시한 예제를 살펴본다.
 
+<소스>
+
+Page 93.
+
+
+
 
 
 
