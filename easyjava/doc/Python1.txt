@@ -470,6 +470,67 @@ NLTK에서 문맥 자유 문법 규칙(Context-free Grammar rules)의 사용을 
 
 Page 93.
 
+<소스>
+
+NLTK에서 ATIS 문법을 접속하는 예제는 다음과 같다.
+
+<소스>
+
+다음과 같이 ATIS에서 테스트 문장을 추출한다.
+
+<소스>
+
+바툼업 파싱
+
+<소스>
+
+Page 94.
+
+<소스>
+
+상향식(bottom-up), 왼쪽 코너(Left Corner) 파싱
+
+<소스>
+
+상향식 필터와 함께 왼쪽 코너 파싱(Left Corner parsing with a Bottom-up filter)
+
+<소스>
+
+하향식 파싱(Top-down  parsing)
+
+<소스>
+
+Page 95.
+
+<소스>
+
+증분 상향식 파싱(Incremental Bottom-up parsing)
+
+<소스>
+
+증분 상향식, 왼쪽 코너 파싱(Incremental Bottom-up, Left Corner parsing)
+
+<소스>
+
+Page 96.
+
+상향식 필터와 증분 왼쪽 코너 파싱(Incremental Left Corner parsing with a Bottom-up filter)
+
+<소스>
+
+증분 하향식 파싱(Incremental Top-down parsing)
+
+<소스>
+
+Earley 파싱(Earley parsing)
+
+<소스>
+
+Page 97.
+
+CFG에서 확률 문맥 자유 문법( 확률 문맥 자유 문법) 생성
+
+
 
 
 
