@@ -530,6 +530,18 @@ Page 97.
 
 CFG에서 확률 문맥 자유 문법( 확률 문맥 자유 문법) 생성
 
+Probabilistic Context-free Grammar(PCFG)에서, 확률은 CFG에 있는 모든 생산 규칙(production rules)에 부착된다. 이러한 확률의 합은 1이다. 그것은 CFG 같은 파스 구조를 생성하지만, 각 파스 트리에 확률을 할당한다. 파스 트리 확률은 트리를 구축하는데 사용되는 모든 생산 규칙 확률의 곱을 취함으로 얻어진다.
+
+PCFG의 규칙의 형성을 설명한 NLTK의 다음 코드를 살펴보자.
+
+<소스>
+
+Page 98.
+
+확률 차트 파싱(Probabilistic Chart Parsing)을 보여주는 NLTK의 코드를 살펴보자.
+
+<소스>
+
 
 
 
