@@ -566,6 +566,56 @@ Page 100.
 
 <소스>
 
+Earley 차트 파싱 알고리즘
+
+Earley 알고리즘은 1970년 Earley에 의해 주어졌다.(확인) 이 알고리즘은 하향식 파싱(Top-down parsing)과 유사하다. 그것은 좌측 재귀(left-recursion)를 처리할 수 있으며 CNF를 필요로하지 않는다. 그것은 오른쪽 태도(right manner)에 왼쪽에 차트를 채운다.(확인)
+
+Earley 차트 파서를 사용한 파싱을 보여주는 예제를 살펴본다.
+
+<소스>
+
+Page 101.
+
+<소스>
+
+NLTK에서 차트 파서를 사용한 파싱을 보여주는 예제를 살펴본다.
+
+<소스>
+
+Page 102.
+
+NLTK에서 스테핑 차트 파서(Stepping Chart parser)를 사용한 파싱을 보여주는 예제를 살펴본다.
+
+<소스>
+
+Page 103.
+
+<소스>
+
+Page 104.
+
+NLTK의 기능 차트 파싱(Feature chart parsing )의 코드를 살펴보자.
+
+<소스>
+
+Page 105.
+
+<소스>
+
+다음 코드는 Earley 알고리즘의 구현을 위한 NLTK에서 발견된다.
+
+<소스>
+
+Page 106.
+
+<소스>
+
+요약
+
+5장에서 Treebank 코퍼스를 접속하고, 문맥이 없는 문법(Context-free Grammar), 확률 문맥 자유 문법(Probabilistic Context-free Grammar), CYK 알고리즘 및 Earley 알고리즘의 구현, 파싱에 대해 다뤘다. 따라서, 5장에서, NLP의 구문 분석 단계에 대해 살펴봤다.
+
+다음 장에서 NLP의 또 다른 단계인 의미 분석에 대해 살펴볼 것이다. 다른 접근 방식을 사용하여 NER에 대해 살펴보고 명료화 작업(disambiguation tasks)을 수행하는 방법을 얻을 것이다.
+
 
 
 
