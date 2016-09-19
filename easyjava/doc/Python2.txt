@@ -1,0 +1,17 @@
+Page 107.
+
+6장. 의미 분석-Meaning Matters
+
+의미 분석, 혹은 의미 생성은 NLP의 작업 중 하나이다. 문자 시퀀스 혹은 단어 시퀀스의 의미를 결정하는 과정으로 정의된다. 명료화 작업을 수행하기 위해 사용될 수 있다.
+
+6장에서는 다음 주제를 살펴볼 것이다.
+
+-NER
+-HMM을 사용한 NER 시스템
+-기계 학습 툴킷(machine learning toolkits)을 사용한 NER 훈련
+-POS 태깅(POS tagging)을 사용한 NER
+-Wordnet에서 synset id의 생성
+-Wordnet을 사용한 명확한 감각(Disambiguating senses)
+
+Page 108.
+
