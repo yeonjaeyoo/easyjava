@@ -275,3 +275,32 @@ Wordnet을 사용한 명확한 감각
 
 파이썬 기술을 사용하여 명료화 혹은 WSD 작업의 구현은 다음과 같다.
 
+2016.09.29
+
+Lesk 알고리즘
+
+-Original Lesk
+-Cosine Lesk(로우 카운트를 사용하는 eotls 중복 계산하는 코사인을 사용)
+-Simple Lesk(with definitions, example(s), and hyper+hyponyms)
+-Adapted/extended Lesk
+-Enhanced Lesk
+
+최대 유사성
+-정보량
+-경로 유사성
+
+감독 WSD(Supervised WSD)
+-It Makes Sense(IMS)
+-SVM WSD
+
+벡터 공간 모델
+-Topic Models, LDA
+-LSI/LSA
+-NMF
+
+그래프 기반 모델
+-Babelfly
+-UKB
+
+Page 128.
+
