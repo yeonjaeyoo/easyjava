@@ -304,3 +304,13 @@ Lesk 알고리즘
 
 Page 128.
 
+기준선
+
+-Random sense
+-Highest lemma counts
+-First NLTK sense
+
+NLTK에서 Wordnet의 의미 유사성은 다음 알고리즘을 포함한다.
+
+Resnik Score: 2개의 토큰을 비교에서, 점수(최소 공통 Subsumer)는 그 두 개의 토큰의 유사성을 결정된 것을 반환된다.
+
