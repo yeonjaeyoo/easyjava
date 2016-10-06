@@ -33,3 +33,28 @@ Page 135.
 
 Dictionary of Affect in Language(DAL)은 감정 분석에 사용할 수 있는 감정적인 단어를 포함한다. 그것은 Cynthia M. Whissell에 의해 형성됐다. 그래서 그것은 또한 Whissell's Dictionary of Affect in Language(WDAL)로 지칭된다.
 
+General Inquirer는 많은 사전으로 구성된다. 이것에서는, 긍정 목록은 1915 단어를 포함하고, 부정 목록은 2291 단어를 포함한다.
+
+Hu-Liu opinion Lexicon(HL)은 6800 단어의 목록을 포함한다(긍정적 및 부정적).
+
+Leipzig Affective Norms for German(LANG)는 독일에서 1000 명사로 구성된 목록이며, 원자가, 구체성과 각성을 기반으로 등급을 가진다.
+
+Loughran and McDonald Financial Sentiment Dictionaries은 Tim Loughran과 Bill McDonald에 의해 생성됐다. 이 사전은 긍정, 부정, 혹은 모달 단어(modal words)인 금융 문서에 대한 단어로 구성된다.
+
+무어는 지배, 각성 및 원자가 관련 네덜란드어의 단어 목록으로 구성된다. 
+
+NRC Emotion Lexicon는  Saif M. Mohammad에 의해 Amazon Mechanical Turk를 통해 개발된 단어의 목록으로 구성된다.
+
+OpinionFinder의 Subjectivity Lexicon은 8221 단어 목록을 포함한다(긍정적 혹은 부정적).
+
+SentiSense는 14 감정 카테고리에 따라 2190 synset과 5496 단어를 포함한다. Warringer는 지배, 각성 그리고 원자가 관련된 Amazon Mechanical Turk에서 수집된 영어로 13,915 단어를 포함한다.
+
+labMT는 10,000 단어로 구성된 단어 목록이다.
+
+영화 리뷰에 대한 감정 분석을 수행하는 NLTK에서 다음 예제를 살펴보자.
+
+<소스>
+
+
+
+ 
