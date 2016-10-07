@@ -91,6 +91,16 @@ Page 139.
 
 <소스>
 
+nltk.sentiment.util 모듈은 Hu-Liu lexicon를 사용하여 감정 분석을 수행하는 NLTK에서 사용한다. 이 모듈은 어휘(lexicon)의 도움으로, 긍정적, 부정적 및 중립적 표현의 수를 카운트하고 이 후 텍스트가 긍정적, 부정적 혹은 중립적 감정으로 이루어져 있는지 다수 카운트에 기초하여 결정한다. 어휘에서 사용할 수 없는 단어는 중립적인 것으로 간주된다.
+
+NER를 사용한 감정 분석
+
+NER는 명명된 엔티티를 발견하고 다른 개체명 클래스로 명명된 개체를 분류하는 과정이다. NER은 규칙 기반 접근(Rule-based approach), List look up approach, and  Statistical approaches(Hidden Markov Model, Maximum Entropy Markov Model, Support Vector Machine, Conditional Random Fields, and Decision Trees) 같은 다양한 기술을 사용하여 수행할 수 있다.
+
+Page 140.
+
+명명된 개체는 리스트에서 식별되는 경우, 그 때 제거되거나 문장으로부터 필터될 수 있다. 마찬가지로, 불용어도 제거할 수 있다. 명명된 개체는 감정 분석에 기여하지 않는 단어이기 때문에 이제 심리 분석은 나머지 단어에 대해 수행될 수 있다.
+
 
 
  
