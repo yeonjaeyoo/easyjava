@@ -18,6 +18,8 @@
 
 Page 184.
 
+DRT(Discourse Representation Theory)는 AR을 실행하는 수단을 제공하기 위해 개발됐다. DRS(Discourse Representation Structure)는 담화 지시 대상 및 조건의 도움으로 담화의 의미를 제공하기 위해 개발됐다. 담화 지시 대상은 담화에서 1차 논리에 사용 된 변수와 관련된 것을 언급한다. 담화 표현 구조 조건은 1차 술어 논리에 사용된 기초 공식(atomic formulas)을 참조한다.
 
+ 
  
 
