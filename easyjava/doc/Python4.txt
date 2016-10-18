@@ -20,6 +20,19 @@ Page 184.
 
 DRT(Discourse Representation Theory)는 AR을 실행하는 수단을 제공하기 위해 개발됐다. DRS(Discourse Representation Structure)는 담화 지시 대상 및 조건의 도움으로 담화의 의미를 제공하기 위해 개발됐다. 담화 지시 대상은 담화에서 1차 논리에 사용 된 변수와 관련된 것을 언급한다. 담화 표현 구조 조건은 1차 술어 논리에 사용된 기초 공식(atomic formulas)을 참조한다.
 
- 
+FOPL(First Order Predicate Logic)은 명제 논리의 개념을 확장하기 위해 개발됐다. FOPL은 함수, 인자 및 한정사의 사용을 포함한다. 한정사의 두 가지 유형은 일반 문장, 즉, 보편적인 한정사와 실존적 한정사를 나타내는 데 사용된다. FOPL에서는 연결어, 상수 및 변수도 사용된다. 예를 들면, 로빈은  bird(robin) 같이 FOPL에서 표현될 수 있다.
+
+이제 담화 표현 구조의 예제를 살펴보자.
+
+<표>
+
+Page 185.
+
+위의 다이어그램은 다음과 같은 문장의 표현이다.
+
+1. John went to a club
+2. John went to a club. He met Sam
+
+여기서, 담화는 두 문장으로 구성된다.  
  
 
