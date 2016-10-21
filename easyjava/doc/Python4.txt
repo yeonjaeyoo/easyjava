@@ -135,6 +135,39 @@ Page 190.
 
 Page 191.
 
+2016.10.21
+
+Anaphora resolution
+
+AR은 문장에서 대명사 혹은 명사구가 해결되고 담화 지식의 기초의 특정한 엔티티를 말하는 과정으로 정의될 수 있다.
+
+예를 들면,
+
+존은 사라를 도왔다. 그는 친절했다.(John helped Sara. He was kind.)
+
+여기에서 그는 존이다.
+
+AR은 즉, 세 가지 유형이다.
+
+-Pronominal: 여기서, 지시대상은 대명사가 지칭된다. 예를 들어, 샘은 그의 인생의 사랑을 발견했다. 여기서 '그'는 '샘'을 말한다. 
+-Definite noun phrase: 여기서, 선행은 폼의 구문, <the><noun phrase>에 의해 참조될 수 있다. 예를 들어, 관계는 오래 지속되지 않을 수 있다. 여기서의 관계는 이전 문장의 사랑을 의미한다.
+-Quantifier/ordinal: 하나(one) 같은 수량과 처음 같은 순서수도 AR의 예제이다. 예를 들어, He began a new one. 여기서, one은 관계를 의미한다.
+
+cataphora에서 지시대상은 선행자 앞에 위치한다.(확인) 예를 들어, After his class, Sam will go home. 여기에서, his는 Sam을 의미한다.
+
+NLTK 아키텍처의 일부 확장을 통합하기 위한, 새로운 모듈은 기존 모듈, nltk.sem.logic 및 nltk.sem.drt의 상단에 개발된다. 새로운 모듈은 nltk.sem.drt 모듈에 대한 대체와 같은 역할이다. 강화된 클래스와 모든 클래스의 대체가 있다.
+
+resolve()라는 메소드는 AbstractDRS()라고 불리는 클래스에서 간접적이고 직접적으로 호출할 수 있다. 그것은 특정 오브젝트의 단호한 복사의 목록을 제공한다. 해결되야 하는 오브젝트는 readings() 메소드를 오버라이드 해야한다. resolve() 메소드는 traverse() 함수를 사용하여 읽기 값을 생성하기 위해 사용된다. traverse() 함수는 조작 목록에 정렬을 수행하기 위해 사용된다. 우선 순위 리스트는 다음을 포함한다.
+
+-결합 작업
+-Local accommodation operations
+-Intermediate accommodation operations
+-Global accommodation operations
+
+Page 192.
+
+
+
 
 
 
