@@ -365,6 +365,7 @@ Page 211.
 
 다음의 두 방법은 파서의 성능을 평가하는데 사용될 수 있다.
 
+-Labelled Attachment Score (LAS)
 
 
  
