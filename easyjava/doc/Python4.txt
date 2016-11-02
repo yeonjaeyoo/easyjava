@@ -419,8 +419,57 @@ F-Measure = (2*Precision*Recall) / (Precision + Recall)
 
 Page 213.
 
-  
+어휘 일치 기반 메트릭
 
+단어 수준 혹은 어휘 수준에서의 성능 분석을 수행할 수 있다.
+
+영화 리뷰가 발생되고 긍정적 혹은 부정적으로 표시되는 NLTK에서 다음 코드를 살펴보자. 특징 추출기는 주어진 워드가 문서에 존재하는지 여부를 검사하는 구성이다.
+
+<소스>
+
+Page 214.
+
+주어진 출력이 기대되는 출력과 동일한지 여부를 결정하는 메트릭을 제공하는 nltk.metrics.distance를 설명하는 NLTK에서 다음 코드를 고려한다.
+
+<소스>
+
+Page 215.
+
+<소스>
+
+Page 216.
+
+<소스>
+
+Page 217.
+
+<소스>
+
+구문 일치 기반 메트릭
+
+구문 일치는 청크의 작업을 수행함으로 행해질 수 있다. NLTK에서, 청크를 식별하는 데 도움이 되는 nltk.chunk.api라는 모듈이 제공되고 주어진 청크 시퀀스에 대한 파스 트리를 반환한다.
+
+nltk.chunk.named_entity라는 모듈은 엔티티의 목록을 식별하기 위해 사용되고 파스 구조를 생성하기도 한다. 구문 검색을 기반으로 NLTK에서 다음 코드를 살펴본다.
+
+<소스>
+
+Page 218.
+
+<소스>
+
+shallow semantic matching을 사용한 메트릭
+
+WordNet Similarity는 의미 매칭을 수행하는 데 사용된다. 이러한 면에서, 주어진 텍스트 유사성은 가설에 대해 계산된다. 자연 언어 툴킷은 계산하는 데 사용할 수 있다. 텍스트와 가설에 존재하는 단어 간의 path distance, Leacock-Chodorow Similarity, Wu-Palmer Similarity, Resnik Similarity, Jiang-Conrath Similarity, and Lin Similarity 이러한 메트릭에서, 단어보단 단어 감각 간의유사성을 비교한다. 
+
+Shallow Semantic 분석하는 동안, NER 및 coreference resolution도 수행된다.
+
+wordnet similarity를 계산하는 NLTK에서 다음 코드를 살펴본다.
+
+<소스>
+
+요약
+
+10장에서 NLP 시스템 평가(POS 태커, 스테머 및 형태소 분석기)를 살펴봤다. 오류 식별, 사전 매칭, 어휘 매칭, shallow 의미 매칭을 기반으로 NLP 시스템의 평가를 수행하기 위해 사용되는 다양한 메트릭을 다뤘다. 골드 데이터를 이용하여 수행된 파서 평가도 살펴봤다. 평가는 세 가지 메트릭, Precision, Recall과 F-Measure을 사용하여 수행할 수 있다. IR 시스템의 평가도 다뤘다.
 
  
 
