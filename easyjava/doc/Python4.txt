@@ -396,6 +396,30 @@ IR 시스템은 문서의 기초, 쿼리, 사용된 기술 등에 기초하여 �
 Precision: 관련된 검색된 세트의 비율로서 정의된다.
 Precision = |relevant ∩  retrieved| ÷ |retrieved| = P( relevant | retrieved )
 
+-Recall: 검색된 세트에 포함 된 콜렉션의 모든 관련 문서의 비율로서 정의된다.
+Recall = |relevant ∩  retrieved| ÷ |relevant| = P( retrieved | relevant )
+
+-F-Measure: 그것은 다음과 같이 Precision 및 Recall를 사용하여 얻을 수 있다.
+F-Measure = (2*Precision*Recall) / (Precision + Recall)
+
+오류 식별 메트릭
+
+오류 식별은 NL는 시스템의 성능에 영향을 미치는 매우 중요한 측면이다. 검색 작업은 다음 용어를 포함할 수 있다.
+
+-True Positive(TP): 이것은 정확하게 관련 문서로서 식별되는 관련 문서들의 세트로 정의될 수 있다.
+-True Negative(TN): 이것은 정확하게 관계없는 문서로서 식별되는 관계없는 문서들의 세트로 정의될 수 있다.
+-False Positive(FP): 타입 I 오류이라고 언급되고 관련 문서들로 올바르지않은 관계없는 문서이다.
+-False Negative(FN): 타입 II 오류이라고 언급되고 관계없는 문서로서 올바르지 않게 식별되는 관련 문서들의 집합이다.
+
+이전에 언급된 용어에 기초하여, 다음 메트릭을 가진다.
+
+-Precision (P) - TP/(TP+FP)
+-Recall (R) - TP/(TP+FN)
+-F-Measure – 2*P*R/(P+R)
+
+Page 213.
+
+  
 
 
  
