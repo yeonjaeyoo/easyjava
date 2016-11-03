@@ -1,0 +1,31 @@
+3장 주석
+
+It is an interface that helps to eliminate morphological affixes from the tokens and the process is known as stemming.
+그것은 토큰에서 형태학상 접사를 제거하는 데 도움이 되는 인터페이스이고, 프로세스는 스테밍으로 알려졌다.
+
+Eliminate affixes from token and stem is returned.
+토큰에서 접사를 제거하고 어간이 반환된다.
+
+Page 59.
+
+Eliminate words which occur often and have not much significance from context point of view.
+자주 발생하고 뷰의 컨텍스트 포인트에서 중요하지 않은 단어를 제거한다.
+
+Perform the task of splitting text into stop words and tokens.
+텍스트를 불용어와 토큰으로 분할하는 작업을 수행한다.
+
+In the document vectors,  generate the keyword for the given position of element.
+문서 벡터에서, 지정된 위치의 요소에 대한 키워드를 생성한다.
+
+Perform mapping of text into strings
+문자열로 텍스트의 매핑을 수행한다.
+
+Eliminate common words that have no search significance
+검색 의미가 없는 일반적인 단어를 제거한다.
+
+Initialise the vector with 0's
+0으로 벡터를 초기화
+
+simple Term Count Model is used
+simple Term Count 모델이 사용된다.
+
