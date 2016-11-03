@@ -29,3 +29,6 @@ Initialise the vector with 0's
 simple Term Count Model is used
 simple Term Count 모델이 사용된다.
 
+Attach a position to keywords that performs mapping with dimension that is used to depict this token
+이 토큰을 묘사하는 데 사용되는 차원과 매핑을 수행하는 키워드 위치를 연결한다.
+
