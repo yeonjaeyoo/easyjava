@@ -95,3 +95,15 @@ Page 69.
 
 Page 70.
 
+기본 태그
+=> 기본 태깅
+
+choose_tag() ~ 구현해야 한다.
+=> S~Taggger는 choose_tag() 메소드를 구현해야한다.
+
+이 메소드는
+=>choose_tag() 메소드는
+
+인수를
+=>인자를
+
