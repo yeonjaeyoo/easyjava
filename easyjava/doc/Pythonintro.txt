@@ -2,4 +2,4 @@ About the Authors
 
 Deepti Chopra는 Banasthali University의 조교수이다. 그녀의 주요 연구 분야는 전산 언어학, 자연어 처리 및 인공 지능이다. 그녀는 영어에서 인도어를 위한 MT 엔진 개발에도 참여한다.(확인) 그녀는 여러 저널 및 컨퍼런스에 다양한 간행물이 있으며 여러 컨퍼런스 및 저널의 프로그램 위원회에서도 활동한다.
 
-Nisheeth Joshi는 Banasthali University의 부교수로 근무한다. 그의 관심 분야는 전산 언어학, 자연 언어 처리 및 인공 지능이다. 
+Nisheeth Joshi는 Banasthali University의 부교수로 근무한다. 그의 관심 분야는 전산 언어학, 자연 언어 처리 및 인공 지능이다. 그는 TDIL 프로그램, 정보 기술부(Department of Information Technology), Govt로 empaneled 전문가 중 하나이다. 인도의, 인도에서 언어 기술 기금과 연구(Language Technology Funding and Research)를 총괄하는 최고의 기관. 그는 다양한 저널 및 컨퍼런스의 여러 간행물을 보유하고 있으며 여러 컨퍼런스 및 저널의 프로그램위원회 및 편집 위원으로도 활동한다. 
