@@ -38,3 +38,13 @@ What this book covers
 
 10장, 'NLP 시스템 평가 - 성능 분석'에서는 NLP 시스템을 평가하는 개념을 이해하고 적용하는 방법에 대해 살펴본다.
 
+What you need for this book
+
+모든 장에서 Python 2.7 혹은 3.2+가 사용된다. NLTK 3.0은 32 비트 머신 혹은 64 비트 머신에 설치해야한다. 필요한 운영 체제는 Windows/Mac/Unix이다.
+
+Who this book is for
+
+이 책은 합리적인 지식 수준과 Python에 대한 이해를 바탕으로 NLP의 중급 개발자를 대상으로 한다.
+
+Conventions
+
