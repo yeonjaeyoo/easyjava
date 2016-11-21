@@ -24,7 +24,13 @@ What this book covers
 
 3장, '형태학 - Getting Our Feet Wet'에서는 스테머, 형태소 분석기 및 형태소 생성기를 개발하는 방법을 다룬다.
 
+4장, '품사 태깅 - 단어 식별'에서는 품사 태깅 및 n-gram 접근을 포함한 통계적 모델링을 다룬다.
 
+5장, '파싱 - 트레이닝 데이터 분석'에서는 트리 뱅크 구성, CFG 구성, CYK 알고리즘, 차트 구문 분석 알고리즘 및 음역의 개념에 대한 정보를 살펴본다.
+
+6장, '의미 분석 - Meaning Matters'에서는 Shallow Semantic Analysis(즉, NER)과 WordNet을 사용하는 WSD의 개념과 애플리케이션에 대해 살펴본다.
+
+7장, 'Sentiment Analysis - I Am Happy'에서는 감정 분석의 개념을 이해하고 적용하는 데 도움이 되는 정보를 제공한다.
 
 
 
