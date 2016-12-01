@@ -187,3 +187,17 @@ Page 128.
 leacock ~ 살펴보자.=> Leacock Chodorow Similarity을 묘사하는 NLTK의 다음 예제를 살펴보자.
 
 Page 129.
+
+기반으로=>기반한
+
+NLTK에=>NLTK의
+
+Page 130.
+
+명확화 작업 ~ 살펴본다.=> disambiguation 작업을 수행하는 데 사용되는 NLTK의 Lesk 알고리즘에 대한 다음 코드를 살펴본다.
+
+Page 131.
+
+Wordnet과 ~ 논의했다.=> NER, HMM을 사용한 NER, Machine Learning Toolkits를 사용한 NER, NER의 성능 메트릭, POS 태깅을 사용하는 NER, Wordnet을 사용한 WSD 및 Synsets 생성에 대해 살펴봤다.
+
+9장=>7장
