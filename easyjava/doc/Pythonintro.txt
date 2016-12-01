@@ -201,3 +201,20 @@ Page 131.
 Wordnet과 ~ 논의했다.=> NER, HMM을 사용한 NER, Machine Learning Toolkits를 사용한 NER, NER의 성능 메트릭, POS 태깅을 사용하는 NER, Wordnet을 사용한 WSD 및 Synsets 생성에 대해 살펴봤다.
 
 9장=>7장
+
+Page 124.
+
+Iterate over all synsets with a given part of speech tag.=>주어진 부분의 음성 태그로 모든 synsets를 반복한다. pos를 지정하지 않으면 모든 품사의 모든 synsets이 로드된다.
+
+#각 품사에 대한 모든 synsets 생성
+#파일을 열어서 읽는다. 여기에서 self._data_file_map의 파일 poitners는 다시 사용할 수 없다는 것을 기억한다. iterator를 정의하고 있기 때문에 우리가 보지 않는 동안 파일 포인터가 이동될 수 있다.
+
+#POS 파일의 각 행에 대한 synsets 생성
+
+#synset이 캐싱되는지 확인한다.
+
+#그렇지 않으면 라인을 파싱한다.
+
+#형용사 위성은 형용사와 같은 파일에 있으므로 실제로 위성인 경우 synset 만 생성한다.(확인)
+#다른 모든 POS 태그의 경우 모든 synsets를 얻는다(이것은 형용사가 형용사 위성을 포함한다는 것을 의미한다).(확인)
+#오픈한 여분의 파일 핸들을 닫는다.
