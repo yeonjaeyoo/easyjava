@@ -13,3 +13,11 @@
 Similarity measure(유사성 척도)
 NLP 작업을 수행하는 데 사용할 수 있는 많은 유사성 척도가 있다.NLTK의 nltk.metrics 패키지는 다양한 NLP 작업을 수행하는 데 도움이 되는 다양한 평가 혹은 유사성 측도를 제공하는 데 사용된다.
 훈련 파일(training file)에서 얻은 표준 점수를 사용한 개체명 인식기(named entity recognizer)의 출력을 분석하는 방법을 살펴보자.
+
+2017.01.18
+
+기본적으로 선택되지 않음여기에서 relate와 relation 간의 편집 거리를 계산할 때 세 가지 작업(1번의 치환 작업과 2번의 삽입 작업)이 수행된다.
+
+suggestion과 calculation 간의 편집 거리를 계산하는 동안 7가지 작업(6번의 치환 작업과 1번의 삽입 작업)이 수행된다.
+
+자카드 계수(Jaccard's coefficient) 혹은 타니모토 계수(Tanimoto coefficient)는 X와 Y의 두 세트의 오버랩 측정으로 정의될 수 있다.
