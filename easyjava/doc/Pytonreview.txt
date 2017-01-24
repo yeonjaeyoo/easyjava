@@ -48,4 +48,15 @@ HMM 추정을 사용하여 테스트를 수행할 수 있다.
 각 단어의 수를 정규화해야 한다.
 Good Turing이 방법은 보이지 않는 객체의 확률을 예측하는 데 도움이 된다.
 이 방법에서는 이항 분포(binomial distribution)가 우리의 관심 객체에 의해 나타난다.
+
 Simple Good Turing은 선형 회귀(linear regression)에 의해 로그 공간에서 선형 라인(linear line)으로 빈도에서 빈도까지 근사치를 수행한다.
+
+c == 0 인 경우 훈련에서 0의 빈도를 갖는 샘플 = N(1)여기서 c는 원래의 카운트이고 N(i)는 카운트 i에서 관찰된 이벤트 타입의 수이다.
+한 쌍(pi, qi)이 주어진다면 pi는 빈도를 나타내고 qi는 빈도의 빈도를 의미하며, 우리의 목표는 제곱 변화를 최소화하는 것이다.
+E(p)와 E(q)는 pi와 qi의 평균이다.
+슬로프(slope)
+인터셉트(intercept)
+param freqdist는 확률 분포가 추정되는 빈도 수를 나타낸다.
+Param bin은 가능한 샘플 수를 추정하는 데 사용된다.
+Nr(r)> 0 인 2개의 목록(r, Nr)에서 도수 분포를 나눈다.
+count 및 Nr(count)에 따라 로그-로그 공간(log-log space)에서 self._slope 및 self._intercept 매개변수를 조정하기 위해 간단한 선형 회귀 분석을 사용한다(로그 공간에서 작업하여 부동 소수점 언더플로우(floating point underflow)가 발생하지 않도록한다.).
