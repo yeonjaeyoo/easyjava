@@ -126,3 +126,5 @@ POS 태깅을 통해 얻어지는 단어의 모호성을 보여주는 예제를 
 choose_tag() 메소드는 SequentialBackoffTagger에 의해 구현되야한다.
 이제 DefaultTagger의 작업을 설명하는 다음 코드를 살펴보자.
 nltk.tag.untag()를 사용하여 태그가 있는 문장을 태그가 없는 문장으로 변환할 수 있다.
+NLTK에서 제공하는 POS 태거(tagger)를 사용하여 토큰 목록에 태그를 지정할 수 있다.
+NLTK에 의해 제공된 품사 태거(part of speech tagger)를 사용하여 토큰 목록의 태깅을 수행할  수 있다.
