@@ -128,3 +128,20 @@ choose_tag() 메소드는 SequentialBackoffTagger에 의해 구현되야한다.
 nltk.tag.untag()를 사용하여 태그가 있는 문장을 태그가 없는 문장으로 변환할 수 있다.
 NLTK에서 제공하는 POS 태거(tagger)를 사용하여 토큰 목록에 태그를 지정할 수 있다.
 NLTK에 의해 제공된 품사 태거(part of speech tagger)를 사용하여 토큰 목록의 태깅을 수행할  수 있다.
+
+2017.02.02
+POS 태깅은 단어 범주 모호성 제거 혹은 문법 태깅이라고도한다.
+규칙 기반(rule-based) 혹은 확률적(stochastic)/확률적(probabilistic)
+POS 분류기(POS classifier)는 문서를 입력으로 가져오고 단어 기능을 얻는다.
+이러한 유형의 분류기를 2차 분류기(second order classifier)라고하며, 단어의 태그를 생성하기 위해 부트스트랩 분류기(bootstrap classifier)를 사용한다.
+백오프 분류기는 백오프 절차가 수행되는 분류기이다.
+출력은 trigram POS tagger가 tigram POS tagger에 의존하는 방식으로 얻어지며, POS tagger는 unigram POS tagger에 의존한다.
+학습=>훈련
+사전=>딕셔너리
+주변 단어 및 태그지도 분류에서, 트레이닝 코퍼스는 단어와 그 정확한 태그를 포함하는 데 사용된다.
+<그림 정의>
+지도 분류에서, 훈련 도중, 특징 추출기(feature extractor)는 입력과 라벨을 받아들이고 일련의 특징을 생성한다.
+라벨과 함께 설정된 이 특징(features)? 기능?은 기계 학습 알고리즘의 입력으로 사용된다.
+classifier:분류기
+테스트 혹은 예측 단계에서 알 수 없는 입력으로 특징을 생성하는 특징 추출기가 사용되며 출력은 기계 학습 알고리즘을 사용하여 라벨 또는 pos 태그 정보의 형태로 출력을 생성하는 분류기 모델(classifier model)로 전송된다.
+최대 엔트로피 분류기는 훈련에 사용된 코퍼스의 전체 가능성을 극대화하기 위해 매개변수 집합을 검색하는 것이다.
