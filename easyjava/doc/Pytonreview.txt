@@ -169,3 +169,12 @@ morphological trees:형태론적 계도
 양식(form)의 생성 규칙 집합(P)
 A→a, 여기서 AÎN과 a는 단말과 비 단말로 구성된다.
 CFG의 문장 수준 구조에는 네 가지 구조가 있다.
+
+2017.02.15
+선언적 구조(Declarative structure)
+declarative sentence(서술문)
+명령형 구조(Imperative structure)
+명령문, 명령(commands) 혹은 제안(commands)(명령은 동사구로 시작하고 주어가 포함되지 않음)을 처리한다.
+예/아니오 구조
+Wh-질의 구조
+일반적인 CFG 규칙은 여기에 요약된다.
