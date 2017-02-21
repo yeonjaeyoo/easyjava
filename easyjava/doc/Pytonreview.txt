@@ -195,3 +195,18 @@ Earley 알고리즘은 1970 년에 Earley가 발표했다.
 그것은 왼쪽에서 오른쪽으로 차트를 채운다.
 5장에서는 Treebank Corpus에 접속하는 파싱과 문맥 자유 문법(Context-free Grammar), 확률적 문맥 자유 문법(Probabilistic Context-Free Grammar), CYK 알고리즘 및 Earley 알고리즘의 구현에 대해 설명했다.
 모호성 제거 작업
+
+2017.02.21
+의미 해석은 의미를 문장에 매핑하는 것을 의미한다.
+meaning or sense
+문장을 분석하고 주어진 입력에 출력을 제공하기 위해 대체(substitution) 및 패턴 일치 기술(pattern matching techniques)을 사용했다.
+Robert Schank : 로버트 생크
+primitives : 원어
+심리 분석 => 의미 분석
+similarity retrieval=>유사도 검색? 유사성 검색
+감성 분석 => 의미 분석
+영어 문장에서 동사, 명사, 형용사, 날짜, 구와 같은 의미 정보를 추출한다.
+비가 온다.
+나는 비옷을 입을 것이다.
+비가 온다면, 나는 비옷을 입을 것이다.
+논리 표현식을 다른 서브 클래스로 분류하는 NLTK의 다음 코드를 살펴보자.
