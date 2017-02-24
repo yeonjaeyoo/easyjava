@@ -230,3 +230,15 @@ HMM은 최적의 상태 시퀀스를 출력으로 생성한다.
 포워드-백워드 알고리즘
 방출 -> 출력
 posterior marginals(후방 가장자리)
+
+2017.02.24
+HMM train에서는 HMM 매개변수인 즉 시작 확률, 전이 확률 및 방출 확률을 계산한다.
+HMM test 동안에는 최적의 태그 시퀀스를 찾는 비터비 알고리즘(Viterbi algorithm)이 사용된다.
+규칙 기반(Rule-based) 혹은 수제(Handcrafted) 접근
+Conditional Random Field : 조건부 임의 필드
+서포트벡터머신(Support Vector Machine
+)Decision Tree(의사결정 트리)
+https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html에서 확인할 수 있다.
+Named Entities : 개체명
+이러한 토큰은 훈련되지 않아서 여기 일부 토큰은 None 태그로 태그가 지정된다.
+주어진 품사 태그로 모든 synset을 반복한다.
