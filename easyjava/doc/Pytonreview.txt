@@ -242,3 +242,4 @@ https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html에�
 Named Entities : 개체명
 이러한 토큰은 훈련되지 않아서 여기 일부 토큰은 None 태그로 태그가 지정된다.
 주어진 품사 태그로 모든 synset을 반복한다.
+여기에서 cat.n.01은 cat이 명사 범주에 속하며 cat의 의미가 하나만 존재함을 의미한다.
