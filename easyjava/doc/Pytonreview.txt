@@ -243,3 +243,9 @@ Named Entities : 개체명
 이러한 토큰은 훈련되지 않아서 여기 일부 토큰은 None 태그로 태그가 지정된다.
 주어진 품사 태그로 모든 synset을 반복한다.
 여기에서 cat.n.01은 cat이 명사 범주에 속하며 cat의 의미가 하나만 존재함을 의미한다.
+
+2017.02.27
+창 기반 메소드(window-based method)와 의존성 기반 메소드(dependency-based method)는 모델링 문맥에 사용된다.
+의존성 기반 방법에서, 문맥은 해당 대상 단어와 특정 구문 관계에 있는 단어가 발생하는 경우 결정된다.
+Measure:척도
+Definition:정의
