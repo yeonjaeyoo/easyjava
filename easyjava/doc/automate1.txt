@@ -17,6 +17,49 @@
 
 인터넷은 삶을 매우 쉽게 만들어주기 때문에 때로는 그 힘을 깨닫지 못한다. 친구 상태를 확인, 부모님 전화, 중요한 비즈니스 이메일(e-mail)에 응답하거나 게임을 하는 등- 오늘날 거의 모든 일에 대해 WWW(World Wide Web)를 사용한다.
 
-Page 12.
+Page 13.
+
+이 레시피를 실행하려면 파이썬 v2.7을 설치해야한다. 일단 설치되면 파이썬 pip를 설치해야한다. PIP는 Pip Installs Packages의 약자로 컴퓨터에 필요한 파이썬 패키지를 다운로드하고 설치하는 데 사용할 수 있는 프로그램이다. 마지막으로 HTTP 요청을 하기 위해 requests 모듈이 필요하다.
+
+requests 모듈을 설치하여 시작할 것이다(운영 체제를 기반으로 머신에서 수행할 수 있도록 파이썬 및 pip 설치를 남겨둘 것이다). 다른 전제 조건은 없다. 이제, 서둘러서 시작하자.
+
+사용 방법
+
+1. Linux/Mac 컴퓨터에서 터미널(Terminal)로 이동하여 다음 커맨드를 실행한다.
+
+pip install -U requests
+
+파이썬 사이트 패키지에 대한 권한이 없는 경우 sudo만 사용해야한다. 그렇지 않으면 sudo가 필요하지않다.(확인)
+
+2. 다음 코드는 파이썬의 requests 모듈에서 HTTP GET 요청을하는 데 도움이 된다.
+
+import requests r =
+requests.get('http://ip.jsontest.com/')
+print("Response object:", r)
+print("Response Text:", r.text)
+
+3. 다음 출력을 확인한다.
+
+<그림>
+
+Page 14.
+
+4. 데이터 페이로드(data payload)로 HTTP GET 요청을 생성하는 것은 요청에서 간단하다. 다음 코드는 이를 달성하는 데 도움이 된다. 전송될 URL 요청을 확인할 수도 있다.
+
+payload = {'q': 'chetan'} r =
+requests.get('https://github.com/search', params=payload)
+print("Request URL:", r.url)
+
+<그림>
+
+5. 이제 requests 모듈을 사용하여 HTTP POST 호출을 생성해보자. 이는 웹 사이트에 로그인 혹은 가입 양식을 채우고 포스트(POST) 하는 것과 유사하다.
+
+payload = {'key1': 'value1'} r =
+requests.post("http://httpbin.org/post", data=payload)
+print("Response text:", r.json())
+
+<그림>
+
+Page 15.
 
 
