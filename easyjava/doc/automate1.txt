@@ -114,3 +114,9 @@ How to do it
 
 Page 18.
 
+3. Inspect를 클릭하면 크롬 브라우저 콘솔 로그가 열리며 다음과 같은 GitHub 가격 페이지의 HTML 구조를 이해하는 데 도움이 된다. 
+
+<그림>
+
+4. 하이라이트된 HTML span-<span class = "defaultcurrency"> $ 7 </ span>을 살펴보면 이 웹 페이지가 default-currency 클래스를 사용하여 요금 가격을 나열한다는 것을 알 수 있다. 이제 이 속성을 사용하여 다양한 GitHub 계획의 가격을 추출한다.
+
