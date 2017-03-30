@@ -293,7 +293,36 @@ Page 27.
 
 Page 28.
 
+2017.03.30
 
+시작하기
+
+이해를 돕기 위해 GitHub 기스트(gists)를 사용한다. GitHub의 기스트(Gists)는 작업을 공유하는 가장 좋은 방법이며 동료 혹은 작은 애플리케이션(app)에 개념을 이해할 수 있는 여러 파일을 제공하는 작은 코드 조각이다. GitHub는 기스트의 생성(creation), 목록(listing), 삭제(deleting) 및 수정(updating)을 허용하며 GitHub REST API로 작업하는 고전적인 사례를 제시한다.
+
+따라서 이 절에서는 자신의 requests 모듈을 사용하여 GitHub REST API에 대한 HTTP 요청을 작성하여 기스트를 생성, 수정, 목록 혹은 삭제한다.
+
+다음 단계는 파이썬을 사용한 GitHub REST API를 사용하는 방법을 살펴볼 것이다.
+
+작동원리(동작원리?)
+
+1. GitHub REST API를 사용하려면 Personal access token을 생성해야한다. 그런 다음 https://github.com/에 로그인하고 https://github.com/settings/tokens로 이동한 다음 Generate new token을 클릭한다.
+
+<그림>
+
+Page 29.
+
+2. 이제 New personal  access token 페이지가 나타난다. 페이지 상단에 설명을 입력하고 주어진 범위 중 gists 옵션을 확인한다. 범위(scope)는 토큰에 대한 접속을 나타낸다. 예를 들어 gists를 선택했다면 GitHub API를 사용하여 gists 자원을 동작할 수 있지만 repo 혹은 사용자와 같은 다른 자원은 사용할 수 없다. 이 레시피의 경우 gists 범위는 필요한 것이다.
+
+<그림>
+
+3. Generate token을 클릭하면 개인 액세스 토큰(personal access token)이 포함된 화면이 나타난다. 이 토큰을 기밀로 유지한다.
+4. 사용 가능한 토큰을 접속하여 API 작업을 시작하고 새로운 기스트를 생성한다. create를 사용하여 새 리소스를 추가하고 이렇게하려면 다음 코드와 같이 GitHub API에 대한 HTTP POST 요청을 생성한다.
+
+<소스>
+
+5. GitHub의 기스트 페이지로 가면 새로 생성된 기스트를 확인할 수 있다. And voila, it's available.(확인)
+
+<그림>
 
 
 
