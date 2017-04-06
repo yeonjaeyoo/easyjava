@@ -547,4 +547,24 @@ Page 44.
 
 Page 45.
 
+4. 검색 페이지부터 시작한다. 크롬 브라우저에서 검색 페이지를 연다(https://www.yelp.com/search?find_desc=Restaurants&find_loc=London). 이제 첫 번째 레스토랑의 URL을 마우스 오른쪽 버튼으로 클릭하고 Inspect를 클릭하여 HTML 요소를 가져온다. 다음 스크린샷에서 알 수 있듯이 검색 페이지에 나열된 모든 레스토랑에는 식당의 이름을 나타내는 공통된 CSS 클래스 이름인 biz-name이 있다. 또한 레스토랑의 전용 URL에 대한 href 태그가 포함된다. 스크린샷에서는 Ffiona's Restaurant이라는 이름을 얻었고 href는 레스토랑의 URL인 https://yelp.com/biz/ffionas-restaurant-london?osq=Resturants를 가리킨다.
+
+<그림>
+
+Page 46.
+
+5. 이제 레스토랑의 전용 페이지에서 HTML 요소를 사용하여 식당의 주소 및 연락처를 수집하는 방법을 살펴보자. 동일한 작업을 수행하고, 마우스 오른쪽 버튼으로 클릭하고, Inspect를 클릭하여 거리 주소 및 연락처 번호의 HTML 요소를 가져온다. 참조할 수 있도록 다음 스크린샷을 살펴본다. 거리 주소는 개별 CSS 클래스인 street-address가 있으며 클래스 이름이 biz-phone인 스팬(span) 아래에서 연락처 번호를 사용할 수 있다.
+
+<그림>
+
+Page 47.
+
+굉장해! 이제 자동화된 방식으로 데이터를 스크랩하는 데 사용할 수 있는 모든 HTML 요소가 있다. 이제 구현을 살펴보자. 다음 파이썬 코드는 이러한 작업을 자동화된 방식으로 수행한다.
+
+<소스>
+
+Page 48.
+
+<소스>
+
 
