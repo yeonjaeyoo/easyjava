@@ -1618,6 +1618,16 @@ Page 122.
 
 Page 123.
 
+작동원리
+
+먼저 구성 파일을 생성하고 필요한 모든 필드를 채운다. send_sms.py 파일에서 config.py를 임포트하여 이 구성 파일을 임포트하고 flask 및 twilio 파이썬 모듈과 같은 필수 모듈을 가져온다.
+
+그런 다음 twilio.rest 모듈에서 임포트한 TwilioRestClient 클래스를 사용하여 twilio 객체인 client를 생성했다. AccountSID 및 AuthToken을 사용하여 객체를 생성한다.
+
+이 후 client.messages 클래스의 create() 메소드를 사용하여 메시지를 전송한다. 여기서 to는 메시지가 전송되는 번호이고 from_는 발신자 ID(caller ID)이며 body는 보낼 텍스트이다. 왜 from_ 대신에 from_을 궁금해하나? 그 이유는 모듈을 가져오는 데 사용되는 파이썬의 from 키워드와 충돌하기 때문이다.
+
+더 알아보기
+
 
 
 
