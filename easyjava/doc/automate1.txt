@@ -1771,5 +1771,17 @@ Page 130.
 
 Page 131.
 
+<소스>
+
+6. outbound_call() 메소드에서 url 매개변수를 보면 BASE_URL을 가리킨다. /answer_url 접미사가 붙은 ngrok URL과 같다. 이제 https://<ngrokid>.ngrok.io/call에 POST 요청을 하면 번호로 전화가 걸린다. 전화를 받으면 https://<ngrokid>.ngrok.io/answer_url에 콜백 POST 요청이 이루어지고 "Hey! You are awesome. Thanks for answering" 메시지가 들릴 것이다. 와우!
+
+7. 서버 로그는 다음과 같다.
+
+<소스>
+
+Page 132.
+
+작동원리
+
 
 
