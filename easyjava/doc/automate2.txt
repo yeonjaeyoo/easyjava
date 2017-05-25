@@ -198,3 +198,13 @@ Page 149.
 
 작동원리
 
+이전 예제에서 SMTP 서버에 로그인하기 위해 fromaddress와 password가 있는 곳의 환경 파일과 이메일 메시지를 보낼 toaddress를 임포트했다.
+
+이제 메시지를 전송하기 전에 새로운 MIME 메시지 객체를 생성한다. 파이썬의 email.mime.multipart 모듈에서 MIMEMultipart() 클래스를 사용한다. 인식하지 못하는 사람들을 위해, MIME multipart 메시지는 단일 전자 메일에서 HTML 및 텍스트 내용을 모두 의미한다. 따라서 이 코드에서는 새로운 multipart MIME 메시지를 생성한 다음 텍스트 내용을 추가한다.
+
+Page 150.
+
+
+
+작동원리
+
