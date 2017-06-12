@@ -618,7 +618,13 @@ Page 181.
 
 Page 182.
 
+2017.06.12
 
+Page 183.
+
+2. 이 후 placeholders를 살펴보자. placeholder는 내용을 추가할 수 있는 미리 서식이 지정된 컨테이너이다. Placeholder는 모양의 분류이므로 여러 모양에 placeholders가 있을 수 있다. 예를 들어 autoshape(첫 번째 레시피에서 본 원형)은 placeholder이다. 그림 혹은 그래픽 프레임은 placeholder가 될 수 있다. 두 개의 내용으로된 슬라이드에 두 개의 placeholders, 왼쪽에 하나, 오른쪽에 하나가 있다. shapes.placeholders[1]로 왼쪽 하나를 목표로 하고 shapes.placeholders[1].text_frame을 참조하는 텍스트 프레임을 위해 첫 번째 라인 This is line 1을 추가했다.
+3. 이 후 add_paragraph() 메소드로 text_frame에 단락을 추가하고 텍스트 Again a line 2… 를 레벨1에 추가하고 And this is line 3…을 레벨 2에서 추가하여 글 머리 기호 행(bulleted lines)을 추가했다.
+4.  
 
 
 
