@@ -671,7 +671,24 @@ Page 186.
 
 Page 187.
 
-  
+이 코드 조각을 실행하면 모든 학생 데이터가 포함된 프레젠테이션에서 생성된 표가 표시된다. 다음 스크린샷을 참조한다.
+
+<그림>
+
+작동원리
+
+첫 번째 코드 조각에서는 다음과 같은 작업을 수행하여 프레젠테이션에 몇 가지 모양을 추가했다.
+
+1. 모양의 유형을 입력으로 사용하는 add_shapes() 메소드 도움으로 모양을 추가했다.
+2. 이 코드에서는 MSO_SHAPE 열거(모든 모양이 나열되어 있음)의 도움을 받아 MSO_SHAPE.RECTANGULAR_CALLOUT 및 MSO_SHAPE.ACTION_BUTTON_HOME이라는 두 가지 모양을 선택한다. 텍스트박스와 마찬가지로 add_shapes() 메소드도 Inches() 메소드로 정의된 모양의 크기가 필요하다.
+3. SlideShape 클래스의 fill 메소드를 사용하여 callout shape에 대한 사용자 지정 색을 정의할 수 있다. shape.fill.fore_color.rgb 속성은 callout shape의 색상을 설정하는 데 사용된다. 사용된 RGB 색상은 스크린샷에서 볼 수 있듯이 밝은 파란색 색상인 1E90FF이다. shape.fill.fore_color.brightness 속성을 사용하여 색상 밝기를 설정한다.
+4. 물론 shape.text 속성을 설정하여 두 가지 모양 모두에 텍스트를 추가했다. 결국 파일을 shapes.pptx로 저장했다.
+
+Page 188.
+
+
+
+
 
 
 
