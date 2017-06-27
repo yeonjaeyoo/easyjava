@@ -828,7 +828,33 @@ HTTP API, 웹 API 등과 같이 API를 언급할 때 사용할 수 있는 용어
 
 Page 201.
 
+7장에서는 다음 목록에 언급된 여러 개의 파이썬 모듈을 살펴본다.
 
+-flask(http://flask.pocoo.org/)
+-twython(https://twython.readthedocs.io/en/latest/)
+-pytz(https://pypi.python.org/pypi/pytz)
+-django(https://www.djangoproject.com/)
+-django-rest-hooks(https://github.com/zapier/django-rest-hooks)
+
+나만의 REST API 디자인
+
+REST(Representational State Transfer)는 커뮤니티에서 많은 선호도와 인기를 얻었으며 사실상 RESTful 웹 서비스를 설계하고 구현하는 기본 아키텍처 스타일이다.
+
+<중요표시시작>
+SOAP 및 XML-RPC 방식을 따를 수 있는 다른 가능한 웹 서비스 구현이 있지만 이 내용은 7장의 범위에 포함되지 않는다. 
+<중요표시종료>
+
+이 레시피에서는 파이썬 플라스크 마이크로 프레임워크(Python flask micro framework)를 사용하여 간단한 RESTful 웹 서비스를 구현하는 방법을 배운다. 사용자 관리를 위한 사용자 서비스를 구현할 것이며 이는 웹 애플리케이션의 필수 요소이다.
+
+REST 아키텍처는 HTTP 프로토콜에 맞게 설계되었으며 리소스의 개념, 즉 URIs(Uniform Resource Identifiers)를 갖는다. 클라이언트는 다른 HTTP 요청 메소드를 사용하여 이러한 URI에 요청을 보내고 영향을 받은 리소스의 상태를 응답으로 되돌린다.
+
+그래서 무엇을 기다리고 있을까? 사용자 웹 서비스를 디자인하고 구현하자.
+
+Page 202.
+
+실행방법
+
+1. 모델을 정의하여 시작하자.-user. 사용자 자원은 일반적으로 이러한 속성으로 식별된다.
 
 
 
