@@ -1048,3 +1048,18 @@ Page 214.
 <그림>
 
 Page 215.
+
+3. 앱 키와 앱 시크릿을 가져와야하기 때문에 OAuth 토큰과 OAuth 토큰 시크릿이 필요하다. 이들은 본질적으로 트위터로 API 호출을 인증하는 데 필요하지만 트위터는 REST API 호출을 악의적인 것으로 간주한다. 새로 생성된 앱을 클릭하고 페이지 상단의 Keys and Access Tokens 탭을 탐색하여 세부 정보를 얻을 수 있다. 이러한 세부 정보를 얻으려면 https://apps.twitter.com/app/<app_id>/keys/로 이동할 수도 있다.
+
+<그림>
+
+4. 좋아! 코드의 일부를 작성하고 트위터의 REST API로 작업할 수 있는지 살펴보자. 다음 코드는 트위터 타임라인 REST API를 호출하고 타임라인에서 가장 윗부분에있는 트윗의 세부 정보를 가져온다. 여기에서는 https://dev.twitter.com/rest/reference/get/statuses/home_timeline REST API에서 HTTP GET 작업을 수행한다.
+
+<소스>
+
+앞의 코드 조각의 출력은 다음과 같다.
+
+<그림>
+
+Page 216.
+
