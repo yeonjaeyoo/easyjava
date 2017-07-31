@@ -1213,3 +1213,23 @@ Page 225.
 
 Page 226.
 
+2017.07.31
+
+좋다! 살펴봤니? /event URL을 호출했고, 필요한 URL을 Webhook의 user.signup 이벤트에 등록된 대상 URL에 게시했다.(확인)
+
+사용자 정의 Webhooks와 마찬가지로 RESTful Webhooks를 개발할 수도 있다. RESTful Webhooks는 RESTful 인터페이스를 통해 구독, 알림 및 게시 작업을 지원한다. RESTful Webhooks는 네 개의 HTTP 동사에 해당하는 ACCESSED, CREATED, UPDATED 및 DELETED의 네 가지 이벤트 유형을 지원한다. 리소스에 적용되는 동작에 대한 알림을 전송한다. 예를 들어 리소스가 생성되면 이벤트가 생성된다. 이렇게하면 Webhook이 트리거되고 대상 URL이 게시되어야 한다. 이 예제에서는 book.Book.added 혹은 book.Book.deleted와 같은 액션과 함께 book.added와 book.deleted라는 두 가지 후크 이벤트를 정의할 수 있다. 모델에서 book.save() 액션을 수행하면 book.added 이벤트가 트리거되고 사용자가 이 이벤트에 대해 정의한 후크가 있으면 대상 URL에서 HTTP POST 요청이 호출된다.
+
+작동원리
+
+이전 코드 조각에서 먼저 settings.py 파일에 이벤트를 정의했다. 이 이벤트의 이름은 user.signup이다. 커스텀 이벤트였으므로 아무런 조치도 취하지 않았다.
+
+이 후 기본 Django 사용자 모델을 사용하여 auth_user 테이블에 새로운 사용자 chetan을 생성했다.
+
+이후에 사용자 chetan의 Webhook을 정의했다. 이 Webhook은 user.signup 이벤트에 대해 구성됐고 대상 URL은 http://localhost:8000/hook/으로 설정됐다.
+
+또한 Django 앱에서 두 가지 뷰를 정의했다. 첫 번째 뷰 이벤트는 해당 사용자 및 이벤트에 대해 Webhook을 실행하고 페이로드 정보를 전송하는 작업을 담당했다. 두 번째 뷰 Webhook는 대상 URL에 대해 정의됐다.
+
+그런 다음 Django 개발 서버를 실행하고 http://localhost:8000/event/로 이동하여 페이로드 정보를 대상 URL, 즉 http://localhost:8000/hook/에 게시했다. 대상 URL은 사용자 이름, 전자 메일 및 가입이 발생한 시간과 같은 모든 페이로드 데이터를 수신했다.
+
+Page 227.
+
