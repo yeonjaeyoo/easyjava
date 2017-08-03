@@ -1264,3 +1264,31 @@ Page 228.
 
 Page 229.
 
+3. Webhook을 선택하면 왼쪽의 TRIGGER and ACTION을 생성하는 화면이 나타난다. 오른쪽에서 Catch Hook 옵션을 선택한다. Save + Continue을 클릭한다. 다음 스크린샷을 참조한다.
+
+<그림>
+
+4. 이 후, 페이로드에서 선택할 JSON 키를 제공하는 페이지가 표시된다. 이것은 선택적 단계이며 무시할 수 있다. Continue를 클릭하여 다음 단계로 이동한다. 여기에 사용자지정 Webhook URL이 있다. 이 URL을 복사한다. 대상 URL로 작동한다.
+
+5. 이제 Django 프로젝트로 돌아가서 DB 쉘로 이동한다. 동일한 이벤트 user.signup으로 새 후크를 생성하고 이전 단계의 Zapier에서 받은 URL을 대상으로 지정한다. 커맨드는 다음과 같다.
+
+<소스>
+
+Page 230.
+
+6. Django 개발 서버를 파이썬 manage.py의 runserver 커맨드로 실행한다. 서버가 실행되면 http://localhost:8000/event/로 이동한다. 이것은 Zapier로부터 얻은 대상 URL에 콜백 요청을 할 것이다. Zapier로 다시 가서 Catch Hook 절 아래 왼쪽 창에서 Test this Step를 살펴보면 이를 확인할 수 있다. 
+
+<그림>
+
+Page 231.
+
+7. 좋아! 이제 트리거가 설정된다. 액션을 설정하자. 이를 위해 왼쪽 창으로 가서 ACTION에서 Set up this step을 클릭한다. 화면 오른쪽에 표시될 앱 목록에서 Gmail을 선택한다.
+
+<그림>
+
+8. Gmail을 클릭하면 Create Draft 혹은 Send Email과 같은 작업을 선택하는 다음 옵션이 나타난다. Zapier가 전자 메일 계정에 액세스 할 수 있게하여 Send Email를 클릭하고 전자 메일 계정을 활성화한다. 다음 스크린샷은 이러한 단계를 수행하는 방법을 보여준다.
+
+<그림>
+
+Page 232.
+
