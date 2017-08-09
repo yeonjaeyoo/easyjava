@@ -1292,3 +1292,12 @@ Page 231.
 
 Page 232.
 
+다음 스크린샷에서 Zapier는 Gmail 앱에 접속할 수 있다.
+
+<그림>
+
+9. 좋아! 지금 보류중인 유일한 것은 이메일 템플릿을 생성하는 것이다. 우리의 템플릿에는 수신 전자 메일 주소, 제목 및 본문이 포함된다. Zapier는 템플릿을 구성하는 좋은 옵션을 제공한다. 다음 두 스크린샷에서 전자 메일 바디로서 To 필드에 Data Email, Subject 필드와 Your Signup made our day!에 Welcome Data Username!를 가진다.
+10. 다음 스크린샷은 트리거의 Test this Step 절에서 수신한 대상 URL의 페이로드에서 사용 가능한 모든 옵션을 표시한다. 방금 사용자이름을 표시했다. 템플릿의 필드 이름 To가 페이로드에서 Data Username을 선택하는 방법을 살펴본다.
+
+Page 233.
+
