@@ -135,6 +135,30 @@ server.starttls() => server.starttls();
 
 Page 5.
 
+3.
+
+서버 객체에서 => server 객체에서
+
+작동원리
+
+이메일 암호화는 이메일 메시지가 의도한 당사자가 아닌 다른 사람이 읽지 못하도록 보호하는 것을 의미한다.
+
+여기에는 인증도 포함될 수 있다.
+
+하지만, STARTTLS(SMTP 상위 계층)의 출현과 메시지 제출을 위한 포트 587의 사용으로, Gmail과 같은 이메일 클라이언트는 이메일 전송에 STARTTLS와 포트 587을 사용한다.
+
+Gmail에도 인증이 구현된다.
+
+확장자 => 확장명
+
+server.ehlo( => server.ehlo()를 전송할 때
+
+extension => 용어 통일. 확장? 확장명? 확장자?
+
+마지막으로 server.quit()를 사용하여 SMTP세션을 종료했으며, 세번째 스크린 샷에 표시된 것처럼 closing connection으로 응답한다.
+
+더 알아보기
+
 
 
 
